@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect, useMemo } from "react";
+import { createContext, useContext, useReducer, useEffect, useMemo, useCallback } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { CartItemWithProduct } from "@shared/schema";
@@ -112,24 +112,36 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     dispatch({ type: "SET_ITEMS", payload: cartItems });
   }, [cartItems]);
 
+  const addToCart = useCallback(async (productId: string, quantity = 1) => {
+    await addToCartMutation.mutateAsync({ productId, quantity });
+  }, [addToCartMutation]);
+
+  const updateQuantity = useCallback(async (productId: string, quantity: number) => {
+    await updateQuantityMutation.mutateAsync({ productId, quantity });
+  }, [updateQuantityMutation]);
+
+  const removeFromCart = useCallback(async (productId: string) => {
+    await removeFromCartMutation.mutateAsync(productId);
+  }, [removeFromCartMutation]);
+
+  const clearCart = useCallback(async () => {
+    await clearCartMutation.mutateAsync();
+  }, [clearCartMutation]);
+
+  const openCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: true }), []);
+  const closeCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: false }), []);
+  const toggleCart = useCallback(() => dispatch({ type: "TOGGLE_OPEN" }), []);
+
   const contextValue: CartContextType = useMemo(() => ({
     ...state,
-    addToCart: async (productId: string, quantity = 1) => {
-      await addToCartMutation.mutateAsync({ productId, quantity });
-    },
-    updateQuantity: async (productId: string, quantity: number) => {
-      await updateQuantityMutation.mutateAsync({ productId, quantity });
-    },
-    removeFromCart: async (productId: string) => {
-      await removeFromCartMutation.mutateAsync(productId);
-    },
-    clearCart: async () => {
-      await clearCartMutation.mutateAsync();
-    },
-    openCart: () => dispatch({ type: "SET_OPEN", payload: true }),
-    closeCart: () => dispatch({ type: "SET_OPEN", payload: false }),
-    toggleCart: () => dispatch({ type: "TOGGLE_OPEN" }),
-  }), [state, addToCartMutation, updateQuantityMutation, removeFromCartMutation, clearCartMutation]);
+    addToCart,
+    updateQuantity,
+    removeFromCart,
+    clearCart,
+    openCart,
+    closeCart,
+    toggleCart,
+  }), [state, addToCart, updateQuantity, removeFromCart, clearCart, openCart, closeCart, toggleCart]);
 
   return (
     <CartContext.Provider value={contextValue}>
