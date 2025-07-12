@@ -167,6 +167,7 @@ export class MemStorage implements IStorage {
         id,
         ...product,
         inStock: true,
+        volume: product.volume || null,
       };
       this.products.set(product.productId, fullProduct);
     });
@@ -194,6 +195,7 @@ export class MemStorage implements IStorage {
       id,
       ...product,
       inStock: true,
+      volume: product.volume || null,
     };
     this.products.set(product.productId, fullProduct);
     return fullProduct;

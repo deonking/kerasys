@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect } from "react";
+import { createContext, useContext, useReducer, useEffect, useMemo } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { CartItemWithProduct } from "@shared/schema";
@@ -112,7 +112,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     dispatch({ type: "SET_ITEMS", payload: cartItems });
   }, [cartItems]);
 
-  const contextValue: CartContextType = {
+  const contextValue: CartContextType = useMemo(() => ({
     ...state,
     addToCart: async (productId: string, quantity = 1) => {
       await addToCartMutation.mutateAsync({ productId, quantity });
@@ -129,7 +129,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     openCart: () => dispatch({ type: "SET_OPEN", payload: true }),
     closeCart: () => dispatch({ type: "SET_OPEN", payload: false }),
     toggleCart: () => dispatch({ type: "TOGGLE_OPEN" }),
-  };
+  }), [state, addToCartMutation, updateQuantityMutation, removeFromCartMutation, clearCartMutation]);
 
   return (
     <CartContext.Provider value={contextValue}>

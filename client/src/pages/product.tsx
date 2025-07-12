@@ -82,7 +82,7 @@ export default function ProductPage() {
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       {/* Breadcrumb */}
       <nav className="mb-8">
-        <Link href="/" className="text-primary hover:text-primary/80">
+        <Link href="/" className="text-black hover:text-gray-600">
           Início
         </Link>
         <span className="mx-2 text-muted-foreground">/</span>
@@ -135,11 +135,11 @@ export default function ProductPage() {
                 R$ {product.originalPrice}
               </div>
             )}
-            <div className="text-4xl font-bold text-primary">
+            <div className="text-4xl font-bold text-black">
               R$ {product.salePrice}
             </div>
             <div className="space-y-1 text-sm">
-              <div className="text-primary font-semibold">
+              <div className="text-black font-semibold">
                 À vista R$ {pixPrice} no PIX (10% off)
               </div>
               <div className="text-muted-foreground">
@@ -159,14 +159,14 @@ export default function ProductPage() {
           <div className="space-y-4">
             <Button
               size="lg"
-              className="w-full text-lg py-3"
+              className="w-full text-lg py-3 bg-black hover:bg-gray-800 text-white"
               onClick={handleAddToCart}
             >
               <ShoppingCart className="h-5 w-5 mr-2" />
               Adicionar ao Carrinho
             </Button>
             
-            <Button variant="outline" size="lg" className="w-full">
+            <Button variant="outline" size="lg" className="w-full border-black text-black hover:bg-black hover:text-white">
               Comprar Agora
             </Button>
           </div>
@@ -175,17 +175,17 @@ export default function ProductPage() {
           <Card>
             <CardContent className="p-4 space-y-3">
               <div className="flex items-center space-x-3">
-                <Truck className="h-5 w-5 text-primary" />
+                <Truck className="h-5 w-5 text-black" />
                 <span className="text-sm">Frete grátis acima de R$ 199</span>
               </div>
               <Separator />
               <div className="flex items-center space-x-3">
-                <Shield className="h-5 w-5 text-primary" />
+                <Shield className="h-5 w-5 text-black" />
                 <span className="text-sm">Garantia de 30 dias</span>
               </div>
               <Separator />
               <div className="flex items-center space-x-3">
-                <Star className="h-5 w-5 text-primary" />
+                <Star className="h-5 w-5 text-black" />
                 <span className="text-sm">Produto original e certificado</span>
               </div>
             </CardContent>

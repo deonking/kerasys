@@ -69,7 +69,7 @@ export function ProductCard({ product }: ProductCardProps) {
                   R$ {product.originalPrice}
                 </span>
               )}
-              <span className="text-2xl font-bold text-primary">
+              <span className="text-2xl font-bold text-black">
                 R$ {product.salePrice}
               </span>
             </div>
@@ -77,7 +77,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <div className="text-sm text-muted-foreground mb-4">
               <div>
                 À vista{" "}
-                <span className="font-semibold text-primary">
+                <span className="font-semibold text-black">
                   R$ {pixPrice}
                 </span>{" "}
                 no Pix
@@ -89,7 +89,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
             
             <Button
-              className="w-full"
+              className="w-full bg-black hover:bg-gray-800 text-white"
               onClick={handleAddToCart}
             >
               <ShoppingCart className="h-4 w-4 mr-2" />

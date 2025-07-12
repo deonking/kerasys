@@ -58,16 +58,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <section className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="bg-white py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">COMPRA AGORA</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Produtos profissionais para o seu cabelo
-            </p>
-            <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-              Ver Mais Vendidos
-            </Button>
+            <div className="mb-8">
+              <img 
+                src="https://xn--kersys-kta.com/wp-content/uploads/2025/04/COMPRA-AGORA.png" 
+                alt="Compra Agora" 
+                className="mx-auto max-w-md w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function Home() {
         <section className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold text-foreground">Mais Vendidos</h2>
-            <a href="#" className="text-primary hover:text-primary/80 font-medium">
+            <a href="#" className="text-black hover:text-gray-600 font-medium">
               Ver todos
             </a>
           </div>
@@ -109,15 +109,15 @@ export default function Home() {
                     {featuredProduct.description}
                   </p>
                   <div className="flex items-center space-x-4 mb-6">
-                    <span className="text-3xl font-bold text-primary">
+                    <span className="text-3xl font-bold text-black">
                       R$ {featuredProduct.salePrice}
                     </span>
-                    <Badge variant="secondary" className="bg-primary/10 text-primary">
+                    <Badge variant="secondary" className="bg-black/10 text-black">
                       <Flame className="h-3 w-3 mr-1" />
                       Produto em destaque
                     </Badge>
                   </div>
-                  <Button size="lg" className="text-lg px-8 py-3">
+                  <Button size="lg" className="text-lg px-8 py-3 bg-black hover:bg-gray-800 text-white">
                     EU QUERO!
                   </Button>
                 </div>
@@ -132,7 +132,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-foreground">
               Kits e Combos Promocionais
             </h2>
-            <a href="#" className="text-primary hover:text-primary/80 font-medium">
+            <a href="#" className="text-black hover:text-gray-600 font-medium">
               Ver todos
             </a>
           </div>
@@ -151,22 +151,22 @@ export default function Home() {
               Formas de Pagamento
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-primary/10 rounded-lg">
-                <QrCode className="h-8 w-8 text-primary mx-auto mb-4" />
+              <div className="text-center p-6 bg-black/5 rounded-lg">
+                <QrCode className="h-8 w-8 text-black mx-auto mb-4" />
                 <h4 className="font-bold text-foreground mb-2">PIX</h4>
                 <p className="text-sm text-muted-foreground">
                   10% de desconto à vista
                 </p>
               </div>
-              <div className="text-center p-6 bg-blue-50 dark:bg-blue-950 rounded-lg">
-                <CreditCard className="h-8 w-8 text-blue-600 mx-auto mb-4" />
+              <div className="text-center p-6 bg-black/5 rounded-lg">
+                <CreditCard className="h-8 w-8 text-black mx-auto mb-4" />
                 <h4 className="font-bold text-foreground mb-2">Cartão de Crédito</h4>
                 <p className="text-sm text-muted-foreground">
                   Em até 12x sem juros
                 </p>
               </div>
-              <div className="text-center p-6 bg-yellow-50 dark:bg-yellow-950 rounded-lg">
-                <Receipt className="h-8 w-8 text-yellow-600 mx-auto mb-4" />
+              <div className="text-center p-6 bg-black/5 rounded-lg">
+                <Receipt className="h-8 w-8 text-black mx-auto mb-4" />
                 <h4 className="font-bold text-foreground mb-2">Boleto</h4>
                 <p className="text-sm text-muted-foreground">
                   5% de desconto à vista

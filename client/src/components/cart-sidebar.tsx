@@ -45,7 +45,7 @@ export function CartSidebar() {
                       <h4 className="text-sm font-medium line-clamp-2">
                         {item.product.name}
                       </h4>
-                      <p className="text-primary font-semibold">
+                      <p className="text-black font-semibold">
                         R$ {item.product.salePrice}
                       </p>
                       <div className="flex items-center space-x-2 mt-2">
@@ -83,11 +83,11 @@ export function CartSidebar() {
               <div className="border-t pt-4">
                 <div className="flex justify-between items-center mb-4">
                   <span className="text-lg font-semibold">Total:</span>
-                  <span className="text-xl font-bold text-primary">
+                  <span className="text-xl font-bold text-black">
                     {formatPrice(total)}
                   </span>
                 </div>
-                <Button className="w-full mb-2">
+                <Button className="w-full mb-2 bg-black hover:bg-gray-800 text-white">
                   Finalizar Compra
                 </Button>
                 <p className="text-xs text-muted-foreground text-center">
