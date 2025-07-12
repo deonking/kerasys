@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Youtube, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Link } from "wouter";
 
 export function Footer() {
   return (
@@ -29,24 +30,24 @@ export function Footer() {
             <h4 className="font-bold mb-4">Categorias</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/categoria/shampoo" className="hover:text-white transition-colors">
                   Shampoo
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/categoria/condicionador" className="hover:text-white transition-colors">
                   Condicionador
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/categoria/tratamento" className="hover:text-white transition-colors">
                   Máscaras
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/categoria/kits-promocionais" className="hover:text-white transition-colors">
                   Kits
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -55,24 +56,24 @@ export function Footer() {
             <h4 className="font-bold mb-4">Atendimento</h4>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/central-de-ajuda" className="hover:text-white transition-colors">
                   Central de Ajuda
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/politica-de-troca" className="hover:text-white transition-colors">
                   Política de Troca
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/frete-e-entrega" className="hover:text-white transition-colors">
                   Frete e Entrega
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <Link href="/contato" className="hover:text-white transition-colors">
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
