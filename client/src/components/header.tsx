@@ -10,14 +10,12 @@ export function Header() {
   return (
     <>
       {/* Top Bar */}
-      <div className="bg-black text-white text-xs py-1">
+      <div className="bg-black text-white text-xs py-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
-            <div className="flex space-x-4">
+            <div className="flex space-x-6">
               <span>CENTRAL DE ATENDIMENTO</span>
-              <span>•</span>
               <span>Entre/Cadastrar</span>
-              <span>•</span>
               <span>Onde está meu produto?</span>
             </div>
             <div className="flex items-center space-x-4">
@@ -69,7 +67,7 @@ export function Header() {
             <div className="flex items-center space-x-6">
               <div className="hidden lg:flex flex-col text-xs text-gray-600">
                 <span>Minha conta</span>
-                <span className="font-semibold">Restrigir/ Pedidos</span>
+                <span className="font-semibold">Registrar/ Pedidos</span>
               </div>
               <Button
                 variant="ghost"

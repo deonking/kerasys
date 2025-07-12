@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -58,16 +59,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Banner */}
-      <section className="bg-white py-8">
+      <section className="bg-white py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="mb-8">
+            <Link href="/categoria/mais-vendidos">
               <img 
                 src="https://xn--kersys-kta.com/wp-content/uploads/2025/04/COMPRA-AGORA.png" 
                 alt="Compra Agora" 
-                className="mx-auto max-w-md w-full"
+                className="mx-auto max-w-sm w-full hover:opacity-90 transition-opacity cursor-pointer"
               />
-            </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -75,52 +76,48 @@ export default function Home() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Best Sellers */}
         <section className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-foreground">Mais Vendidos</h2>
-            <a href="#" className="text-black hover:text-gray-600 font-medium">
-              Ver todos
-            </a>
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-black text-center">Mais vendidos</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
             {bestSellers.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </section>
 
-        {/* Featured Product */}
+        {/* Featured Product - Propolis */}
         {featuredProduct && (
-          <section className="mb-16">
-            <div className="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950 dark:to-orange-950 rounded-2xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <img
-                    src={featuredProduct.imageUrl}
-                    alt={featuredProduct.name}
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
-                  />
+          <section className="mb-16 bg-white">
+            <div className="flex flex-col lg:flex-row items-center gap-8 p-8 border border-gray-200 rounded-lg">
+              <div className="lg:w-1/3">
+                <img
+                  src={featuredProduct.imageUrl}
+                  alt={featuredProduct.name}
+                  className="w-full max-w-xs mx-auto"
+                />
+              </div>
+              <div className="lg:w-2/3 text-center lg:text-left">
+                <h2 className="text-2xl font-bold text-black mb-4">
+                  Kerasys Propolis Energy Shampoo 1L
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  O <strong>Kerasys Própolis</strong> é um tratamento que combate a porosidade, criando uma película protetora sobre os fios danificados. Ele ajuda a recuperar o brilho, maciez e força dos cabelos, blindando completamente a fibra capilar contra sujeiras, fungos e bactérias.
+                </p>
+                <div className="mb-6">
+                  <span className="text-3xl font-bold text-black">
+                    R$ {featuredProduct.salePrice}
+                  </span>
                 </div>
-                <div>
-                  <h2 className="text-3xl font-bold text-foreground mb-4">
-                    {featuredProduct.name}
-                  </h2>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {featuredProduct.description}
-                  </p>
-                  <div className="flex items-center space-x-4 mb-6">
-                    <span className="text-3xl font-bold text-black">
-                      R$ {featuredProduct.salePrice}
-                    </span>
-                    <Badge variant="secondary" className="bg-black/10 text-black">
-                      <Flame className="h-3 w-3 mr-1" />
-                      Produto em destaque
-                    </Badge>
-                  </div>
-                  <Button size="lg" className="text-lg px-8 py-3 bg-black hover:bg-gray-800 text-white">
-                    EU QUERO!
+                <Link href={`/produto/${featuredProduct.productId}`}>
+                  <Button 
+                    size="lg" 
+                    className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-none font-medium"
+                  >
+                    eu quero!
                   </Button>
-                </div>
+                </Link>
               </div>
             </div>
           </section>
@@ -128,51 +125,47 @@ export default function Home() {
 
         {/* Kits Section */}
         <section className="mb-16">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-foreground">
-              Kits e Combos Promocionais
-            </h2>
-            <a href="#" className="text-black hover:text-gray-600 font-medium">
-              Ver todos
-            </a>
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-black text-center">Kits e combos promocionais</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
             {kits.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
         </section>
 
-        {/* Payment Methods */}
+        {/* Category Sections */}
         <section className="mb-16">
-          <div className="bg-card rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-              Formas de Pagamento
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-black/5 rounded-lg">
-                <QrCode className="h-8 w-8 text-black mx-auto mb-4" />
-                <h4 className="font-bold text-foreground mb-2">PIX</h4>
-                <p className="text-sm text-muted-foreground">
-                  10% de desconto à vista
-                </p>
-              </div>
-              <div className="text-center p-6 bg-black/5 rounded-lg">
-                <CreditCard className="h-8 w-8 text-black mx-auto mb-4" />
-                <h4 className="font-bold text-foreground mb-2">Cartão de Crédito</h4>
-                <p className="text-sm text-muted-foreground">
-                  Em até 12x sem juros
-                </p>
-              </div>
-              <div className="text-center p-6 bg-black/5 rounded-lg">
-                <Receipt className="h-8 w-8 text-black mx-auto mb-4" />
-                <h4 className="font-bold text-foreground mb-2">Boleto</h4>
-                <p className="text-sm text-muted-foreground">
-                  5% de desconto à vista
-                </p>
-              </div>
-            </div>
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-black text-center">Shampoo</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+            {products.filter(p => p.category === 'shampoo').slice(0, 6).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="text-center mb-8">
+            <img 
+              src="https://xn--kersys-kta.com/wp-content/uploads/2025/04/COMPRA-AGORA-1-665x800.png" 
+              alt="Compra Agora" 
+              className="mx-auto max-w-xs"
+            />
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-black text-center">Condicionador</h2>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-3">
+            {products.filter(p => p.category === 'condicionador').slice(0, 6).map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
           </div>
         </section>
       </main>
