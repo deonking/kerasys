@@ -4,7 +4,7 @@ const categories = [
   { name: "SHAMPOO", href: "/categoria/shampoo" },
   { name: "CONDICIONADOR", href: "/categoria/condicionador" },
   { name: "TRATAMENTO", href: "/categoria/tratamento" },
-  { name: "KITS PROMOCIONAIS", href: "/categoria/kits" },
+  { name: "KITS PROMOCIONAIS", href: "/categoria/kits-promocionais" },
 ];
 
 export function Navigation() {

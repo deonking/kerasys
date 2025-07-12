@@ -63,36 +63,28 @@ export function ProductCard({ product }: ProductCardProps) {
         
         <div className="mb-2">
           {product.discountPercentage > 0 && (
-            <div className="text-gray-400 line-through text-xs">
-              R$ {product.originalPrice}
+            <div className="text-gray-400 line-through text-sm">
+              R${product.originalPrice}
             </div>
           )}
           <div className="text-lg font-bold text-black">
-            R$ {product.salePrice}
+            R${product.salePrice}
           </div>
         </div>
         
-        {/* PIX Discount Card */}
-        <div className="bg-green-50 border border-green-200 rounded p-2 mb-3">
-          <div className="text-xs text-center">
-            <div className="text-green-700 font-semibold">
-              R$ {pixPrice}
-            </div>
-            <div className="text-green-600 text-[10px]">
-              à vista no PIX
-            </div>
-          </div>
+        <div className="text-xs text-gray-600 mb-1">
+          <span className="font-medium">A vista</span> <span className="text-green-600 font-bold">R${pixPrice}</span> <span className="text-gray-500">no Pix</span>
         </div>
         
-        <div className="text-xs text-gray-600 mb-3 text-center">
-          ou em até 12x de R$ {installmentPrice}
+        <div className="text-xs text-gray-600 mb-3">
+          Em até 12x de R${installmentPrice}
         </div>
         
         <Button
-          className="w-full bg-orange-500 hover:bg-orange-600 text-white text-xs py-2 h-8 rounded-sm"
+          className="w-full bg-black hover:bg-gray-800 text-white text-sm py-2 rounded-md transition-colors"
           onClick={handleAddToCart}
         >
-          COMPRAR
+          Comprar
         </Button>
       </div>
     </div>

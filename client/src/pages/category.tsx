@@ -7,6 +7,7 @@ import type { Product } from "@shared/schema";
 
 const categoryNames: Record<string, string> = {
   kits: "Kits e Combos",
+  "kits-promocionais": "Kits e Combos",
   shampoo: "Shampoos",
   condicionador: "Condicionadores",
   tratamento: "Tratamentos Capilares",

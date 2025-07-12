@@ -109,24 +109,26 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    dispatch({ type: "SET_ITEMS", payload: cartItems });
+    if (cartItems) {
+      dispatch({ type: "SET_ITEMS", payload: cartItems });
+    }
   }, [cartItems]);
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
     await addToCartMutation.mutateAsync({ productId, quantity });
-  }, [addToCartMutation]);
+  }, [addToCartMutation.mutateAsync]);
 
   const updateQuantity = useCallback(async (productId: string, quantity: number) => {
     await updateQuantityMutation.mutateAsync({ productId, quantity });
-  }, [updateQuantityMutation]);
+  }, [updateQuantityMutation.mutateAsync]);
 
   const removeFromCart = useCallback(async (productId: string) => {
     await removeFromCartMutation.mutateAsync(productId);
-  }, [removeFromCartMutation]);
+  }, [removeFromCartMutation.mutateAsync]);
 
   const clearCart = useCallback(async () => {
     await clearCartMutation.mutateAsync();
-  }, [clearCartMutation]);
+  }, [clearCartMutation.mutateAsync]);
 
   const openCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: true }), []);
   const closeCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: false }), []);
