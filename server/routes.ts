@@ -1,0 +1,128 @@
+import type { Express } from "express";
+import { createServer, type Server } from "http";
+import { storage } from "./storage";
+import session from "express-session";
+import MemoryStore from "memorystore";
+
+const MemoryStoreSession = MemoryStore(session);
+
+export async function registerRoutes(app: Express): Promise<Server> {
+  // Session configuration
+  app.use(session({
+    store: new MemoryStoreSession({
+      checkPeriod: 86400000 // prune expired entries every 24h
+    }),
+    secret: process.env.SESSION_SECRET || 'kerasys-secret-key',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false, maxAge: 86400000 } // 24 hours
+  }));
+
+  // Products routes
+  app.get("/api/products", async (req, res) => {
+    try {
+      const { category } = req.query;
+      let products;
+      
+      if (category && typeof category === 'string') {
+        products = await storage.getProductsByCategory(category);
+      } else {
+        products = await storage.getAllProducts();
+      }
+      
+      res.json(products);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar produtos" });
+    }
+  });
+
+  app.get("/api/products/:id", async (req, res) => {
+    try {
+      const product = await storage.getProductById(req.params.id);
+      if (!product) {
+        return res.status(404).json({ message: "Produto não encontrado" });
+      }
+      res.json(product);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar produto" });
+    }
+  });
+
+  // Cart routes
+  app.get("/api/cart", async (req, res) => {
+    try {
+      const sessionId = req.session.id;
+      const cartItems = await storage.getCartItems(sessionId);
+      res.json(cartItems);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao buscar carrinho" });
+    }
+  });
+
+  app.post("/api/cart", async (req, res) => {
+    try {
+      const sessionId = req.session.id;
+      const { productId, quantity = 1 } = req.body;
+      
+      if (!productId) {
+        return res.status(400).json({ message: "ID do produto é obrigatório" });
+      }
+      
+      const product = await storage.getProductById(productId);
+      if (!product) {
+        return res.status(404).json({ message: "Produto não encontrado" });
+      }
+      
+      const cartItem = await storage.addToCart(sessionId, productId, quantity);
+      res.json(cartItem);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao adicionar ao carrinho" });
+    }
+  });
+
+  app.put("/api/cart/:productId", async (req, res) => {
+    try {
+      const sessionId = req.session.id;
+      const { productId } = req.params;
+      const { quantity } = req.body;
+      
+      if (!quantity || quantity < 0) {
+        return res.status(400).json({ message: "Quantidade deve ser maior que zero" });
+      }
+      
+      const cartItem = await storage.updateCartItemQuantity(sessionId, productId, quantity);
+      res.json(cartItem);
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao atualizar carrinho" });
+    }
+  });
+
+  app.delete("/api/cart/:productId", async (req, res) => {
+    try {
+      const sessionId = req.session.id;
+      const { productId } = req.params;
+      
+      const removed = await storage.removeFromCart(sessionId, productId);
+      if (!removed) {
+        return res.status(404).json({ message: "Item não encontrado no carrinho" });
+      }
+      
+      res.json({ message: "Item removido do carrinho" });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao remover do carrinho" });
+    }
+  });
+
+  app.delete("/api/cart", async (req, res) => {
+    try {
+      const sessionId = req.session.id;
+      await storage.clearCart(sessionId);
+      res.json({ message: "Carrinho limpo" });
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao limpar carrinho" });
+    }
+  });
+
+  const httpServer = createServer(app);
+  return httpServer;
+}
