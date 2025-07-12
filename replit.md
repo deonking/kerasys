@@ -80,4 +80,12 @@ Preferred communication style: Simple, everyday language.
 - **Planned**: PostgreSQL database with Drizzle ORM migrations
 - **Session Store**: Currently MemoryStore, can be upgraded to connect-pg-simple for PostgreSQL
 
+#### Recent Changes (January 2025)
+- **Complete Product Catalog**: Added 62 authentic products from reference site across all categories
+- **Category Navigation**: Updated "kits" to "kits-promocionais" to match reference site structure
+- **Product Page Layout**: Redesigned to match reference site with Brazilian e-commerce patterns
+- **Cart Context**: Fixed infinite render issues with proper dependency management
+- **Query Functions**: Fixed category filtering with proper API parameter handling
+- **Pricing Display**: Implemented PIX discount and installment pricing throughout
+
 The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
