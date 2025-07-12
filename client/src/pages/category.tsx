@@ -1,9 +1,24 @@
 import { useQuery } from "@tanstack/react-query";
-import { useRoute } from "wouter";
+import { useRoute, useLocation } from "wouter";
 import { ProductCard } from "@/components/product-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Product } from "@shared/schema";
+
+interface PaginationData {
+  currentPage: number;
+  totalPages: number;
+  totalProducts: number;
+  hasNextPage: boolean;
+  hasPreviousPage: boolean;
+}
+
+interface ProductsResponse {
+  products: Product[];
+  pagination: PaginationData;
+}
 
 const categoryNames: Record<string, string> = {
   kits: "Kits e Combos",
@@ -15,12 +30,17 @@ const categoryNames: Record<string, string> = {
 
 export default function Category() {
   const [, params] = useRoute("/categoria/:category");
+  const [, setLocation] = useLocation();
   const category = params?.category;
+  
+  // Get current page from URL params
+  const urlParams = new URLSearchParams(window.location.search);
+  const currentPage = parseInt(urlParams.get('page') || '1', 10);
 
-  const { data: products = [], isLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products", category],
+  const { data, isLoading } = useQuery<ProductsResponse>({
+    queryKey: ["/api/products", category, currentPage],
     queryFn: async () => {
-      const response = await fetch(`/api/products?category=${category}`);
+      const response = await fetch(`/api/products?category=${category}&page=${currentPage}&limit=12`);
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
@@ -28,6 +48,9 @@ export default function Category() {
     },
     enabled: !!category,
   });
+
+  const products = data?.products || [];
+  const pagination = data?.pagination;
 
   if (!category) {
     return <div>Categoria não encontrada</div>;
@@ -66,7 +89,12 @@ export default function Category() {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2">{categoryName}</h1>
         <p className="text-muted-foreground">
-          {products.length} produtos encontrados
+          {pagination?.totalProducts || 0} produtos encontrados
+          {pagination && pagination.totalPages > 1 && (
+            <span className="ml-2">
+              (Página {pagination.currentPage} de {pagination.totalPages})
+            </span>
+          )}
         </p>
       </div>
 
@@ -85,6 +113,53 @@ export default function Category() {
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
+        </div>
+      )}
+      
+      {/* Pagination */}
+      {pagination && pagination.totalPages > 1 && (
+        <div className="flex justify-center items-center mt-12 space-x-2">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              const newPage = currentPage - 1;
+              setLocation(`/categoria/${category}?page=${newPage}`);
+            }}
+            disabled={!pagination.hasPreviousPage}
+          >
+            <ChevronLeft className="h-4 w-4 mr-1" />
+            Anterior
+          </Button>
+          
+          <div className="flex space-x-1">
+            {Array.from({ length: pagination.totalPages }, (_, i) => i + 1).map((page) => (
+              <Button
+                key={page}
+                variant={page === currentPage ? "default" : "outline"}
+                size="sm"
+                onClick={() => {
+                  setLocation(`/categoria/${category}?page=${page}`);
+                }}
+                className={page === currentPage ? "bg-black text-white" : ""}
+              >
+                {page}
+              </Button>
+            ))}
+          </div>
+          
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => {
+              const newPage = currentPage + 1;
+              setLocation(`/categoria/${category}?page=${newPage}`);
+            }}
+            disabled={!pagination.hasNextPage}
+          >
+            Próxima
+            <ChevronRight className="h-4 w-4 ml-1" />
+          </Button>
         </div>
       )}
     </main>

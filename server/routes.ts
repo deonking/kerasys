@@ -21,7 +21,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Products routes
   app.get("/api/products", async (req, res) => {
     try {
-      const { category } = req.query;
+      const { category, page = '1', limit = '12' } = req.query;
       let products;
       
       if (category && typeof category === 'string') {
@@ -30,7 +30,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
         products = await storage.getAllProducts();
       }
       
-      res.json(products);
+      // Implement pagination
+      const pageNum = parseInt(page as string, 10);
+      const limitNum = parseInt(limit as string, 10);
+      const startIndex = (pageNum - 1) * limitNum;
+      const endIndex = startIndex + limitNum;
+      
+      const paginatedProducts = products.slice(startIndex, endIndex);
+      const totalPages = Math.ceil(products.length / limitNum);
+      
+      res.json({
+        products: paginatedProducts,
+        pagination: {
+          currentPage: pageNum,
+          totalPages,
+          totalProducts: products.length,
+          hasNextPage: pageNum < totalPages,
+          hasPreviousPage: pageNum > 1
+        }
+      });
     } catch (error) {
       res.status(500).json({ message: "Erro ao buscar produtos" });
     }

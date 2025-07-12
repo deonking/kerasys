@@ -9,13 +9,24 @@ import { CreditCard, QrCode, Receipt, Flame } from "lucide-react";
 import type { Product } from "@shared/schema";
 
 export default function Home() {
-  const { data: products = [], isLoading } = useQuery<Product[]>({
+  const { data: allProductsData, isLoading } = useQuery({
     queryKey: ["/api/products"],
+    queryFn: async () => {
+      const response = await fetch("/api/products?limit=100");
+      return response.json();
+    },
   });
 
-  const { data: kits = [] } = useQuery<Product[]>({
-    queryKey: ["/api/products", { category: "kits" }],
+  const { data: kitsData } = useQuery({
+    queryKey: ["/api/products", "kits-promocionais"],
+    queryFn: async () => {
+      const response = await fetch("/api/products?category=kits-promocionais&limit=20");
+      return response.json();
+    },
   });
+
+  const products = allProductsData?.products || [];
+  const kits = kitsData?.products || [];
 
   const featuredProduct = products.find(p => p.productId === "featured-propolis");
   const bestSellers = products.slice(0, 8);
