@@ -18,7 +18,14 @@ export default function Category() {
   const category = params?.category;
 
   const { data: products = [], isLoading } = useQuery<Product[]>({
-    queryKey: ["/api/products", { category }],
+    queryKey: ["/api/products", category],
+    queryFn: async () => {
+      const response = await fetch(`/api/products?category=${category}`);
+      if (!response.ok) {
+        throw new Error('Failed to fetch products');
+      }
+      return response.json();
+    },
     enabled: !!category,
   });
 
