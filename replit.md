@@ -81,6 +81,8 @@ Preferred communication style: Simple, everyday language.
 - **Session Store**: Currently MemoryStore, can be upgraded to connect-pg-simple for PostgreSQL
 
 #### Recent Changes (January 2025)
+- **Image Proxy Solution**: Implemented server-side proxy for ElaUSA images to resolve CORS issues and ensure real product photos display correctly
+- **Cart Context Bug Fix**: Resolved infinite loop in cart context that was causing browser console errors and performance issues
 - **Massive Catalog Expansion**: Expanded from 12 to 56 authentic Kerasys products from ElaUSA
 - **Complete Shampoo Collection**: Added 25 shampoos covering all Kerasys lines (Keratin Bond, Oriental Premium, Natural Recipe, Hair Clinic, Perfume, Damage Clinic)
 - **Full Product Lines**: Implemented complete product lines with matching shampoos, condicionadores and treatments
