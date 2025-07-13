@@ -27,10 +27,10 @@ export class MemStorage implements IStorage {
 
   private seedProducts() {
     const productsData: InsertProduct[] = [
-      // Kit Promocional
+      // Kits Promocionais
       {
         name: "Kerasys - Keratin Bond Duo Silky Moisture Shampoo 600ml + Tratamento Volume 600ml",
-        description: "A dupla Silky Moisture Shampoo e Volume Treatment é perfeita para quem busca cabelos com toque sedoso, brilho radiante e volume natural. Enquanto o shampoo hidrata profundamente e combate o ressecamento, o tratamento condicionante devolve corpo e leveza aos fios, sem pesar. Com fórmula enriquecida com ceramidas, manteiga de karité e ácido cítrico, o Silky Moisture repõe a umidade dos fios ressecados, melhora a textura e combate a porosidade. O Volume Treatment hidrata, condiciona e promove volume natural com leveza, com proteína de trigo, colágeno e biotina.",
+        description: "A dupla Silky Moisture Shampoo e Volume Treatment é perfeita para quem busca cabelos com toque sedoso, brilho radiante e volume natural. Enquanto o shampoo hidrata profundamente e combate o ressecamento, o tratamento condicionante devolve corpo e leveza aos fios, sem pesar. Com fórmula enriquecida com ceramidas, manteiga de karité e ácido cítrico.",
         category: "kits-promocionais",
         originalPrice: "359.80",
         salePrice: "169.90",
@@ -41,7 +41,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Kerasys - Keratin Bond Duo Deep Repair Shampoo 600ml + Tratamento Purifying 600ml",
-        description: "Kit profissional com shampoo reparador e tratamento purificante para cabelos danificados. Fórmula com tecnologia Keratin Bond que reconstrói a estrutura capilar, promovendo reparação profunda e purificação dos fios. O shampoo limpa profundamente enquanto o tratamento purificante remove impurezas e equilibra o couro cabeludo.",
+        description: "Kit profissional com shampoo reparador e tratamento purificante para cabelos danificados. Fórmula com tecnologia Keratin Bond que reconstrói a estrutura capilar, promovendo reparação profunda e purificação dos fios.",
         category: "kits-promocionais",
         originalPrice: "389.80",
         salePrice: "169.90",
@@ -52,7 +52,7 @@ export class MemStorage implements IStorage {
       },
       {
         name: "Kerasys - Deep Cleansing Shampoo Refil 500ml + Bed Head - Clean Up Peppermint Conditioner 200ml",
-        description: "Kit com shampoo de limpeza profunda e condicionador com menta. O Deep Cleansing Shampoo remove resíduos e impurezas do couro cabeludo, enquanto o condicionador com menta proporciona sensação refrescante e hidratação. Ideal para cabelos oleosos que necessitam de limpeza profunda e frescor.",
+        description: "Kit com shampoo de limpeza profunda e condicionador com menta. O Deep Cleansing Shampoo remove resíduos e impurezas do couro cabeludo, enquanto o condicionador com menta proporciona sensação refrescante e hidratação.",
         category: "kits-promocionais",
         originalPrice: "249.80",
         salePrice: "69.90",
@@ -71,6 +71,78 @@ export class MemStorage implements IStorage {
         imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/l/o/lovely_senka.png",
         volume: "Kit 600ml cada",
         productId: "6134469",
+      },
+      {
+        name: "Kerasys Perfume Lovely Romantic Shampoo 400ml + Condicionador 400ml",
+        description: "Kit com shampoo e condicionador perfumado da linha Lovely Romantic em tamanho compacto. Fragrância delicada e duradoura, ideal para uso diário. Fórmula que limpa suavemente e condiciona os fios.",
+        category: "kits-promocionais", 
+        originalPrice: "209.80",
+        salePrice: "169.90",
+        discountPercentage: 19,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/s/h/shampoo_e_cond_lovely_romantic_400ml.png",
+        volume: "Kit 400ml cada",
+        productId: "6134470",
+      },
+      
+      // Condicionadores
+      {
+        name: "Kerasys Repairing Argan Oil Condicionador 180ml",
+        description: "Condicionador reparador enriquecido com óleo de argan que nutre profundamente os fios danificados. Fórmula concentrada que restaura a maciez, brilho e maleabilidade dos cabelos. Ideal para cabelos ressecados e com falta de vitalidade.",
+        category: "condicionadores",
+        originalPrice: "69.90",
+        salePrice: "37.77",
+        discountPercentage: 46,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/r/e/repairing_cd.jpg",
+        volume: "180ml",
+        productId: "6134471",
+      },
+      {
+        name: "Kerasys Coconut Oil Condicionador 1L (Made in Korea) - Nova Embalagem!",
+        description: "Condicionador com óleo de coco para cabelos secos, danificados e sem brilho. Fórmula coreana autêntica que proporciona hidratação intensa e nutrição profunda. Nova embalagem com fórmula aprimorada para resultados ainda melhores.",
+        category: "condicionadores",
+        originalPrice: "179.90",
+        salePrice: "97.77",
+        discountPercentage: 46,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/c/o/coconut_oil_conditioner_new_package.jpg",
+        volume: "1L",
+        productId: "6134472",
+      },
+      {
+        name: "Kerasys Natural Recipe - Tea Tree Oil - Condicionador 1L (Made in Korea) - Nova Embalagem",
+        description: "Condicionador com óleo de tea tree para limpeza e purificação do couro cabeludo. Fórmula natural que combate oleosidade excessiva e proporciona sensação de frescor. Ideal para cabelos oleosos e couro cabeludo sensibilizado.",
+        category: "condicionadores",
+        originalPrice: "199.90",
+        salePrice: "157.77",
+        discountPercentage: 21,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/t/e/tea_tree_cd_1l.png",
+        volume: "1L",
+        productId: "6134473",
+      },
+      
+      // Tratamentos
+      {
+        name: "Kerasys Advanced Moisture Ampoule 10x – Ceramide Ampoule Serum 80ml",
+        description: "Ampola de tratamento intensivo com ceramidas para hidratação profunda. Fórmula concentrada 10x mais potente que proporciona reparação instantânea aos fios ressecados. Tecnologia avançada de liberação gradual para resultados duradouros.",
+        category: "tratamentos",
+        originalPrice: "169.90",
+        salePrice: "99.90",
+        discountPercentage: 41,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/m/o/moisture_6.jpg",
+        volume: "80ml",
+        productId: "6134474",
+      },
+      
+      // Shampoos
+      {
+        name: "Kerasys - Oriental Premium Red Camellia Oil EX - Shampoo 600ml (Nova Fórmula)",
+        description: "Shampoo premium com óleo de camélia vermelha para cabelos que necessitam de nutrição intensa. Nova fórmula oriental enriquecida com ingredientes naturais que proporcionam limpeza suave e hidratação profunda. Ideal para cabelos ressecados e sem brilho.",
+        category: "shampoos",
+        originalPrice: "139.90",
+        salePrice: "109.90",
+        discountPercentage: 21,
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/o/r/oriental_p_sh_600.png",
+        volume: "600ml",
+        productId: "6134475",
       },
       {
         name: "Kerasys Perfume Lovely Romantic Shampoo 400ml + Condicionador 400ml",
@@ -234,6 +306,9 @@ export class MemStorage implements IStorage {
         volume: "400ml",
         productId: "6066201",
       },
+        volume: "400ml",
+        productId: "6066201",
+      },
       {
         name: "Kerasys Advanced Repair Ampoule Treatment 80ml",
         description: "Tratamento reparador intensivo em ampola para cabelos severamente danificados. Fórmula concentrada com proteínas e ceramidas que reconstroem a estrutura capilar, restaurando força, elasticidade e brilho aos fios.",
@@ -367,6 +442,111 @@ export class MemStorage implements IStorage {
         productId: "6066213",
       },
     ];
+
+    productsData.forEach(product => {
+      const fullProduct: Product = {
+        ...product,
+        id: (this.currentProductId++).toString(),
+        createdAt: new Date().toISOString(),
+      };
+      this.products.set(fullProduct.id, fullProduct);
+    });
+  }
+
+  async getAllProducts(): Promise<Product[]> {
+    return Array.from(this.products.values());
+  }
+
+  async getProductsByCategory(category: string): Promise<Product[]> {
+    return Array.from(this.products.values()).filter(p => p.category === category);
+  }
+
+  async getProductById(id: string): Promise<Product | undefined> {
+    return this.products.get(id);
+  }
+
+  async createProduct(product: InsertProduct): Promise<Product> {
+    const fullProduct: Product = {
+      ...product,
+      id: (this.currentProductId++).toString(),
+      createdAt: new Date().toISOString(),
+    };
+    this.products.set(fullProduct.id, fullProduct);
+    return fullProduct;
+  }
+
+  async getCartItems(sessionId: string): Promise<CartItemWithProduct[]> {
+    const items = this.cartItems.get(sessionId) || [];
+    const itemsWithProducts: CartItemWithProduct[] = [];
+    
+    for (const item of items) {
+      const product = await this.getProductById(item.productId);
+      if (product) {
+        itemsWithProducts.push({
+          ...item,
+          product,
+        });
+      }
+    }
+    
+    return itemsWithProducts;
+  }
+
+  async addToCart(sessionId: string, productId: string, quantity: number): Promise<CartItem> {
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const existingItem = sessionItems.find(item => item.productId === productId);
+    
+    if (existingItem) {
+      existingItem.quantity += quantity;
+      existingItem.updatedAt = new Date().toISOString();
+      return existingItem;
+    } else {
+      const newItem: CartItem = {
+        id: (this.currentCartId++).toString(),
+        sessionId,
+        productId,
+        quantity,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      sessionItems.push(newItem);
+      this.cartItems.set(sessionId, sessionItems);
+      return newItem;
+    }
+  }
+
+  async updateCartItemQuantity(sessionId: string, productId: string, quantity: number): Promise<CartItem | undefined> {
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const item = sessionItems.find(item => item.productId === productId);
+    
+    if (item) {
+      item.quantity = quantity;
+      item.updatedAt = new Date().toISOString();
+      return item;
+    }
+    
+    return undefined;
+  }
+
+  async removeFromCart(sessionId: string, productId: string): Promise<boolean> {
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const initialLength = sessionItems.length;
+    const filteredItems = sessionItems.filter(item => item.productId !== productId);
+    
+    if (filteredItems.length < initialLength) {
+      this.cartItems.set(sessionId, filteredItems);
+      return true;
+    }
+    
+    return false;
+  }
+
+  async clearCart(sessionId: string): Promise<void> {
+    this.cartItems.set(sessionId, []);
+  }
+}
+
+export const storage = new MemStorage();
 
     productsData.forEach((product) => {
       const fullProduct: Product = {

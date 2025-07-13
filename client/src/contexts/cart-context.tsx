@@ -109,7 +109,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    dispatch({ type: "SET_ITEMS", payload: cartItems });
+    if (cartItems) {
+      dispatch({ type: "SET_ITEMS", payload: cartItems });
+    }
   }, [cartItems]);
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
@@ -141,7 +143,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     openCart,
     closeCart,
     toggleCart,
-  }), [state, addToCart, updateQuantity, removeFromCart, clearCart, openCart, closeCart, toggleCart]);
+  }), [state.items, state.isOpen, state.total, state.itemCount, addToCart, updateQuantity, removeFromCart, clearCart]);
 
   return (
     <CartContext.Provider value={contextValue}>
