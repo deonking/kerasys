@@ -61,11 +61,7 @@ export function ProductCard({ product }: ProductCardProps) {
               src={product.imageUrl}
               alt={product.name}
               className="w-full h-48 object-cover"
-              onError={(e) => {
-                console.log('Image error for:', product.name, product.imageUrl);
-                setImageError(true);
-              }}
-              onLoad={() => console.log('Image loaded:', product.name)}
+              onError={() => setImageError(true)}
               loading="lazy"
               crossOrigin="anonymous"
             />

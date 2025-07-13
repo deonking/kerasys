@@ -1,0 +1,15 @@
+[vite] connected.
+Warning: Maximum update depth exceeded. This can happen when a component calls setState inside useEffect, but useEffect either doesn&#x27;t have a dependency array, or one of the dependencies changes on every render.
+    at CartProvider (https://cb9e6179-598c-44d9-9f85-0cb7ebef9798-00-1celrrjmystfa.janeway.replit.dev/src/contexts/cart-context.tsx:51:32)
+    at Provider (https://cb9e6179-598c-44d9-9f85-0cb7ebef9798-00-1celrrjmystfa.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-OWVT6AXS.js?v=301ce6c8:22:15)
+    at TooltipProvider (https://cb9e6179-598c-44d9-9f85-0cb7ebef9798-00-1celrrjmystfa.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=301ce6c8:56:5)
+    at QueryClientProvider (https://cb9e6179-598c-44d9-9f85-0cb7ebef9798-00-1celrrjmystfa.janeway.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=301ce6c8:2805:3)
+    at App
+Image error for: Kerasys - Keratin Bond Duo Silky Moisture Shampoo 600ml + Tratamento Volume 600ml https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/k/b/kb_kit_sil_vol.png
+Image error for: Kerasys - Keratin Bond Kit Silky Moisture Shampoo + Condicionador 600ml https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/k/b/kb_kit_rep_pur.png
+Image error for: Kerasys - Deep Cleansing Shampoo Refil 500ml + Bed Head - Clean Up Peppermint Conditioner 200ml https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/k/i/kit_deep_cleansing_up.png
+Image error for: Kerasys Perfume Lovely Romantic Shampoo + Condicionador 600ml (Grátis SENKA - Perfect Whip A 50g) https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/l/o/lovely_senka.png
+Image error for: Kerasys Perfume Lovely Romantic Shampoo 400ml + Condicionador 400ml https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/s/h/shampoo_e_cond_lovely_romantic_400ml.png
+Image error for: Kerasys Repairing Argan Oil Condicionador 180ml https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/r/e/repairing_cd.jpg
+Image error for: Kerasys Coconut Oil Condicionador 1L (Made in Korea) - Nova Embalagem! https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/c/o/coconut_oil_conditioner_new_package.jpg
+Image error for: Kerasys Natural Recipe - Tea Tree Oil - Condicionador 1L (Made in Korea) - Nova Embalagem https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/t/e/tea_tree_cd_1l.png

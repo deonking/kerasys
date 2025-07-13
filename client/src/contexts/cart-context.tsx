@@ -70,7 +70,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   // Update local state when cartItems change
   useEffect(() => {
-    dispatch({ type: "SET_ITEMS", payload: cartItems });
+    if (cartItems) {
+      dispatch({ type: "SET_ITEMS", payload: cartItems });
+    }
   }, [cartItems]);
 
   const addToCartMutation = useMutation({
@@ -144,7 +146,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     openCart,
     closeCart,
     toggleCart,
-  }), [state.items, state.isOpen, state.total, state.itemCount, addToCart, updateQuantity, removeFromCart, clearCart]);
+  }), [state, addToCart, updateQuantity, removeFromCart, clearCart, openCart, closeCart, toggleCart]);
 
   return (
     <CartContext.Provider value={contextValue}>
