@@ -100,12 +100,11 @@ export default function ProductPage() {
             </div>
           ) : (
             <img
-              src={product.imageUrl}
+              src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
               alt={product.name}
               className="w-full max-w-lg mx-auto rounded-lg"
               onError={() => setImageError(true)}
               loading="lazy"
-              referrerPolicy="no-referrer"
             />
           )}
         </div>

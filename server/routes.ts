@@ -149,7 +149,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.status(400).json({ message: "URL da imagem é obrigatória" });
       }
 
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+          'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
+          'Accept-Language': 'pt-BR,pt;q=0.9,en;q=0.8',
+          'Cache-Control': 'no-cache',
+          'Pragma': 'no-cache',
+          'Sec-Fetch-Dest': 'image',
+          'Sec-Fetch-Mode': 'no-cors',
+          'Sec-Fetch-Site': 'cross-site'
+        }
+      });
+
       if (!response.ok) {
         return res.status(404).json({ message: "Imagem não encontrada" });
       }
@@ -160,11 +172,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.set({
         'Content-Type': contentType,
         'Cache-Control': 'public, max-age=86400',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': 'GET'
       });
       
       res.send(Buffer.from(buffer));
     } catch (error) {
+      console.error('Image proxy error:', error);
       res.status(500).json({ message: "Erro ao carregar imagem" });
     }
   });

@@ -68,12 +68,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     refetchOnWindowFocus: false,
   });
 
-  // Update local state when cartItems change
-  useEffect(() => {
-    if (cartItems) {
-      dispatch({ type: "SET_ITEMS", payload: cartItems });
-    }
-  }, [cartItems]);
+
 
   const addToCartMutation = useMutation({
     mutationFn: async ({ productId, quantity = 1 }: { productId: string; quantity?: number }) => {
@@ -138,7 +133,10 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const toggleCart = useCallback(() => dispatch({ type: "TOGGLE_OPEN" }), []);
 
   const contextValue: CartContextType = useMemo(() => ({
-    ...state,
+    items: cartItems,
+    isOpen: state.isOpen,
+    total: cartItems.reduce((sum, item) => sum + (parseFloat(item.product.salePrice) * item.quantity), 0),
+    itemCount: cartItems.reduce((sum, item) => sum + item.quantity, 0),
     addToCart,
     updateQuantity,
     removeFromCart,
@@ -146,7 +144,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     openCart,
     closeCart,
     toggleCart,
-  }), [state, addToCart, updateQuantity, removeFromCart, clearCart, openCart, closeCart, toggleCart]);
+  }), [cartItems, state.isOpen, addToCart, updateQuantity, removeFromCart, clearCart, openCart, closeCart, toggleCart]);
 
   return (
     <CartContext.Provider value={contextValue}>

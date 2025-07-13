@@ -58,12 +58,11 @@ export function ProductCard({ product }: ProductCardProps) {
             </div>
           ) : (
             <img
-              src={product.imageUrl}
+              src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
               alt={product.name}
               className="w-full h-48 object-cover"
               onError={() => setImageError(true)}
               loading="lazy"
-              crossOrigin="anonymous"
             />
           )}
         </Link>
