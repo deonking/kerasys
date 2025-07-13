@@ -61,7 +61,10 @@ export function ProductCard({ product }: ProductCardProps) {
               src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
               alt={product.name}
               className="w-full h-48 object-cover"
-              onError={() => setImageError(true)}
+              onError={(e) => {
+                console.log('Image failed:', product.name, `Source: /api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`);
+                setImageError(true);
+              }}
               loading="lazy"
             />
           )}

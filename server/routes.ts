@@ -154,15 +154,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
           'Accept': 'image/webp,image/apng,image/*,*/*;q=0.8',
           'Accept-Language': 'pt-BR,pt;q=0.9,en;q=0.8',
-          'Cache-Control': 'no-cache',
-          'Pragma': 'no-cache',
-          'Sec-Fetch-Dest': 'image',
-          'Sec-Fetch-Mode': 'no-cors',
-          'Sec-Fetch-Site': 'cross-site'
+          'Referer': 'https://elausa.com.br/',
+          'Cache-Control': 'no-cache'
         }
       });
 
       if (!response.ok) {
+        console.log(`Image fetch failed: ${response.status} ${response.statusText} for ${url}`);
         return res.status(404).json({ message: "Imagem não encontrada" });
       }
 
