@@ -1,0 +1,102 @@
+Request URL
+https://elausa.com.br/default/marcas/kerasyskorea.html?p=3&product_list_limit=36&product_list_mode=list&is_scroll=1
+Request Method
+GET
+Status Code
+200 OK
+Remote Address
+151.101.1.124:443
+Referrer Policy
+strict-origin-when-cross-origin
+accept-ranges
+bytes
+age
+698
+cache-control
+no-store, no-cache, must-revalidate, max-age=0
+content-encoding
+gzip
+content-length
+6820
+content-security-policy-report-only
+font-src www.searchanise.com *.searchserverapi.com *.fontawesome.com data: 'self' 'unsafe-inline'; form-action geostag.cardinalcommerce.com geo.cardinalcommerce.com 1eafstag.cardinalcommerce.com 1eaf.cardinalcommerce.com centinelapistag.cardinalcommerce.com centinelapi.cardinalcommerce.com pilot-payflowlink.paypal.com www.paypal.com www.sandbox.paypal.com www.searchanise.com *.searchserverapi.com *.twitter.com *.cardinalcommerce.com *.paypal.com 3ds-secure.cardcomplete.com www.clicksafe.lloydstsb.com pay.activa-card.com *.wirecard.com acs.sia.eu *.touchtechpayments.com www.securesuite.co.uk rsa3dsauth.com *.monzo.com *.arcot.com *.wlp-acs.com * 'self' 'unsafe-inline'; frame-ancestors *.bolt.com 'self'; frame-src fast.amc.demdex.net *.adobe.com geostag.cardinalcommerce.com geo.cardinalcommerce.com 1eafstag.cardinalcommerce.com 1eaf.cardinalcommerce.com centinelapistag.cardinalcommerce.com centinelapi.cardinalcommerce.com bid.g.doubleclick.net *.youtube.com *.youtube-nocookie.com www.paypal.com www.sandbox.paypal.com pilot-payflowlink.paypal.com player.vimeo.com *.bolt.com https://www.google.com/recaptcha/ www.googletagmanager.com www.searchanise.com *.searchserverapi.com *.twitter.com c.paypal.com checkout.paypal.com assets.braintreegateway.com pay.google.com *.cardinalcommerce.com *.paypal.com * 'self' 'unsafe-inline'; img-src assets.adobedtm.com amcglobal.sc.omtrdc.net dpm.demdex.net cm.everesttech.net *.adobe.com widgets.magentocommerce.com data: www.googleadservices.com www.google-analytics.com googleads.g.doubleclick.net www.google.com bid.g.doubleclick.net analytics.google.com www.googletagmanager.com *.ftcdn.net *.behance.net t.paypal.com www.paypal.com www.paypalobjects.com fpdbs.paypal.com fpdbs.sandbox.paypal.com *.vimeocdn.com i.ytimg.com *.youtube.com validator.swagger.io *.twitter.com *.twimg.com www.google.ru www.searchanise.com *.searchserverapi.com s3.amazonaws.com www.sandbox.paypal.com b.stats.paypal.com dub.stats.paypal.com assets.braintreegateway.com c.paypal.com checkout.paypal.com *.paypal.com data: 'self' 'unsafe-inline'; script-src assets.adobedtm.com *.adobe.com geostag.cardinalcommerce.com 1eafstag.cardinalcommerce.com geoapi.cardinalcommerce.com 1eafapi.cardinalcommerce.com songbird.cardinalcommerce.com includestest.ccdc02.com www.googleadservices.com www.google-analytics.com googleads.g.doubleclick.net analytics.google.com www.googletagmanager.com *.newrelic.com *.nr-data.net www.paypal.com www.sandbox.paypal.com www.paypalobjects.com t.paypal.com s.ytimg.com www.googleapis.com vimeo.com www.vimeo.com *.vimeocdn.com *.youtube.com *.bolt.com *.commerce-quick-checkout.com http://localhost:8082 https://www.gstatic.com/recaptcha/ https://www.google.com/recaptcha/ *.pagar.me searchanise-ef84.kxcdn.com s3.amazonaws.com ajax.aspnetcdn.com www.searchanise.com *.searchserverapi.com *.searchanise.com api.amplitude.com *.twitter.com *.twimg.com *.avada.io js.braintreegateway.com assets.braintreegateway.com c.paypal.com pay.google.com api.braintreegateway.com api.sandbox.braintreegateway.com client-analytics.braintreegateway.com client-analytics.sandbox.braintreegateway.com *.paypal.com songbirdstag.cardinalcommerce.com 'self' 'unsafe-inline' 'unsafe-eval'; style-src *.adobe.com www.searchanise.com *.searchserverapi.com searchanise-ef84.kxcdn.com s3.amazonaws.com *.twitter.com ton.twimg.com *.fontawesome.com unsafe-inline assets.braintreegateway.com 'self' 'unsafe-inline'; object-src 'self' 'unsafe-inline'; media-src *.adobe.com 'self' 'unsafe-inline'; manifest-src 'self' 'unsafe-inline'; connect-src dpm.demdex.net amcglobal.sc.omtrdc.net geostag.cardinalcommerce.com geo.cardinalcommerce.com 1eafstag.cardinalcommerce.com 1eaf.cardinalcommerce.com centinelapistag.cardinalcommerce.com centinelapi.cardinalcommerce.com www.google-analytics.com www.googleadservices.com analytics.google.com www.googletagmanager.com *.newrelic.com *.nr-data.net vimeo.com www.sandbox.paypal.com www.paypalobjects.com www.paypal.com pilot-payflowlink.paypal.com *.bolt.com *.pagar.me https://viacep.com.br https://www.viacep.com.br api.amplitude.com stats.g.doubleclick.net https://get.geojs.io *.avada.io api.braintreegateway.com api.sandbox.braintreegateway.com client-analytics.braintreegateway.com client-analytics.sandbox.braintreegateway.com *.braintree-api.com *.paypal.com *.cardinalcommerce.com *.google.com google.com 'self' 'unsafe-inline'; child-src assets.braintreegateway.com c.paypal.com *.paypal.com http: https: blob: 'self' 'unsafe-inline'; default-src 'self' 'unsafe-inline' 'unsafe-eval'; base-uri 'self' 'unsafe-inline';
+content-type
+application/json
+date
+Sun, 13 Jul 2025 04:33:37 GMT
+expires
+Mon, 14 Jul 2025 04:21:59 GMT
+pragma
+cache
+strict-transport-security
+max-age=31557600
+traceresponse
+00-1851b4cc31e7b3053871b155ade63b5e-d89850e929156d7b-01
+vary
+Accept-Encoding
+x-cache
+MISS, MISS, HIT
+x-cache-hits
+0, 0, 0
+x-content-type-options
+nosniff
+x-debug-info
+eyJyZXRyaWVzIjowfQ==
+x-frame-options
+SAMEORIGIN
+x-platform-server
+i-07e6727ce665930e2
+x-platform-server
+i-07e6727ce665930e2
+x-served-by
+cache-gig2250073-GIG, cache-gig2250073-GIG, cache-gru-sbgr1930027-GRU
+x-timer
+S1752380519.122039,VS0,VE847
+x-xss-protection
+1; mode=block
+:authority
+elausa.com.br
+:method
+GET
+:path
+/default/marcas/kerasyskorea.html?p=3&product_list_limit=36&product_list_mode=list&is_scroll=1
+:scheme
+https
+accept
+application/json, text/javascript, */*; q=0.01
+accept-encoding
+gzip, deflate, br, zstd
+accept-language
+pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7
+cookie
+_gcl_au=1.1.402008197.1752380350; _clck=y9uik9%7C2%7Cfxk%7C0%7C2020; PHPSESSID=e433d35042b502502f012477cd29fdc1; _fbp=fb.2.1752380351547.902007664191437820; form_key=ADQhvYP3SgkFd9T8; mage-cache-storage={}; mage-cache-storage-section-invalidation={}; mage-cache-sessid=true; mage-messages=; form_key=ADQhvYP3SgkFd9T8; recently_viewed_product={}; recently_viewed_product_previous={}; recently_compared_product={}; recently_compared_product_previous={}; product_data_storage={}; section_data_ids={%22customer%22:1752380434}; user_allowed_save_cookie=%7B%221%22%3A1%7D; _ga=GA1.1.649914641.1752380422; _ga_ERR6NF5FM0=GS2.1.s1752380421$o1$g1$t1752380694$j57$l0$h1611125062; _clsk=1q8sixu%7C1752381131119%7C24%7C1%7Co.clarity.ms%2Fcollect
+newrelic
+eyJ2IjpbMCwxXSwiZCI6eyJ0eSI6IkJyb3dzZXIiLCJhYyI6IjM3MjUzMDYiLCJhcCI6IjExMjAxNTEwNzEiLCJpZCI6IjU0YjRlOGJjOTUwOWRkNWYiLCJ0ciI6ImJhZGMxZGZmZTgzNjBkMGU5NTRhMDZiMjE2OTEzZWFmIiwidGkiOjE3NTIzODExMzczOTUsInRrIjoiMTMyMjg0MCJ9fQ==
+priority
+u=1, i
+referer
+https://elausa.com.br/default/marcas/kerasyskorea.html?p=1&product_list_limit=36&product_list_mode=list
+sec-ch-ua
+"Not)A;Brand";v="8", "Chromium";v="138", "Google Chrome";v="138"
+sec-ch-ua-mobile
+?0
+sec-ch-ua-platform
+"Windows"
+sec-fetch-dest
+empty
+sec-fetch-mode
+cors
+sec-fetch-site
+same-origin
+traceparent
+00-badc1dffe8360d0e954a06b216913eaf-54b4e8bc9509dd5f-01
+tracestate
+1322840@nr=0-1-3725306-1120151071-54b4e8bc9509dd5f----1752381137395
+user-agent
+Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36
+x-newrelic-id
+VwEFVFVTDhABVFlaDgIFUFQA
+x-requested-with
+XMLHttpRequest
+
+
