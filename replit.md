@@ -91,5 +91,10 @@ Preferred communication style: Simple, everyday language.
 - **Real Pricing**: All products maintain authentic Brazilian pricing from ElaUSA with verified discount percentages
 - **Product Categories**: Organized into kits-promocionais, condicionador, tratamento, and shampoo categories
 - **Migration Completed**: Successfully migrated from Replit Agent to standard Replit environment with full functionality
+- **Global Product Expansion (Janeiro 2025)**: Adicionados 20+ produtos populares mundialmente da Kerasys baseado em pesquisa de mercado global
+- **Internationally Popular Lines**: Incluídas linhas Elegance & Sensual, Hair Clinic System, Natural Recipe (Tea Tree/Coconut), Color Care Protection e Advanced Age Care
+- **Professional Grade Products**: Adicionados produtos de nível profissional como ampolas terapêuticas e sistemas clínicos coreanos
+- **Comprehensive Portfolio**: Catálogo agora inclui 50+ produtos cobrindo todas as necessidades capilares: hidratação, reparação, volume, anti-idade, proteção da cor
+- **High-Quality Imagery**: Utilizadas imagens profissionais de alta qualidade via Unsplash para produtos não disponíveis na ElaUSA mas populares globalmente
 
 The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
