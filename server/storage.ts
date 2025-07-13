@@ -27,9 +27,10 @@ export class MemStorage implements IStorage {
 
   private seedProducts() {
     const productsData: InsertProduct[] = [
+      // Condicionadores
       {
         name: "Kerasys Advanced Color Protect – Condicionador 400ml",
-        description: "Condicionador avançado para proteção da cor dos cabelos",
+        description: "Condicionador especializado para cabelos coloridos e danificados. Desenvolvido com tecnologia Keratin e Ceramide Ampoule, ajuda a reconstruir a estrutura capilar, fortalecendo os fios e preservando a vibrância da cor. Sua fórmula Color Protect combate a oxidação e evita o desbotamento precoce.",
         category: "condicionador",
         originalPrice: "105.90",
         salePrice: "65.00",
@@ -39,41 +40,8 @@ export class MemStorage implements IStorage {
         productId: "84448",
       },
       {
-        name: "Kerasys Advanced Keramide Ampoule Damage Clinic – Máscara Capilar 1L",
-        description: "Máscara capilar reparadora com keramida para cabelos danificados",
-        category: "tratamento",
-        originalPrice: "199.90",
-        salePrice: "136.89",
-        discountPercentage: 32,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/e7f05be2-3a41-48b5-bec9-c6eaa2714d49-2025-01-06t175701078717335-keramaketrdm-65d364ccc4936428e5550c10-b916948c-632d-45db-98f2-b73ee9f92df4-1.jpg",
-        volume: "1L",
-        productId: "84449",
-      },
-      {
-        name: "Kerasys Advanced Keramide Ampoule Damage Clinic – Shampoo 1L",
-        description: "Shampoo reparador com keramida para cabelos danificados",
-        category: "shampoo",
-        originalPrice: "139.90",
-        salePrice: "98.90",
-        discountPercentage: 29,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/b9693156-96d1-497c-89e9-3d816c782160-2024-12-27t174409978034878-kekeamdaclsh-65d364ccc4936428e5550c10-626e36a9-4b36-4e93-9bb8-0de860d19eb5-1.jpg",
-        volume: "1L",
-        productId: "84450",
-      },
-      {
-        name: "Kerasys Advanced Moisture Ampoule 10x – Máscara Capilar 300ml",
-        description: "Máscara capilar hidratante intensiva com ampola de hidratação 10x",
-        category: "tratamento",
-        originalPrice: "115.90",
-        salePrice: "85.90",
-        discountPercentage: 26,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/a4feeeb4-0c89-4563-9cc9-15fd1e065ea1-2023-11-02t144851691408143-mascara-kerasys-advance-ampoule-moisture-10x-hair-pack-300mljpg14366720382224873603-1.jpg",
-        volume: "300ml",
-        productId: "84451",
-      },
-      {
         name: "Kerasys Argan Oil – Condicionador 1L",
-        description: "Condicionador nutritivo com óleo de argan para cabelos ressecados",
+        description: "Condicionador desenvolvido para cabelos secos e danificados. Enriquecido com Óleo de Argan que contém o dobro de Vitamina E em comparação com o azeite de oliva, oferece alta hidratação e aroma fresco de flores e almíscar. Combate a secura extrema, danos e embaraçamento.",
         category: "condicionador",
         originalPrice: "119.90",
         salePrice: "89.90",
@@ -81,17 +49,6 @@ export class MemStorage implements IStorage {
         imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/9fdcc98f-ea1f-463f-96c4-c729d4c4fd9e-2024-10-09t111532073084114-kerarg021000-66ce14b94b567678abe903d7-95a57a73-2399-4618-b0ea-36096daec229_1-1.jpg",
         volume: "1L",
         productId: "84452",
-      },
-      {
-        name: "Kerasys Argan Oil – Máscara Capilar 1L",
-        description: "Máscara capilar nutritiva com óleo de argan",
-        category: "tratamento",
-        originalPrice: "199.90",
-        salePrice: "139.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/7a344dca-890a-49a1-a709-b032ed332e65-mp275637-mascara-kerasys-argan-oil-treatment-1l-1.png",
-        volume: "1L",
-        productId: "84453",
       },
       {
         name: "Kerasys Clabo Romantic Citrus Deep Clean – Condicionador 960ml",
@@ -105,8 +62,190 @@ export class MemStorage implements IStorage {
         productId: "84454",
       },
       {
+        name: "Kerasys Oriental Premium – Condicionador 200ml",
+        description: "Condicionador premium com ingredientes orientais",
+        category: "condicionador",
+        originalPrice: "69.90",
+        salePrice: "39.90",
+        discountPercentage: 43,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/0ba05c6f-b7e7-4998-b651-f8733595b36a-kerasys-oriental-premium-condicionador-200ml_1-1.png",
+        volume: "200ml",
+        productId: "84462",
+      },
+      {
+        name: "Kerasys Oriental Premium – Condicionador 600ml",
+        description: "Condicionador premium com ingredientes orientais em tamanho família",
+        category: "condicionador",
+        originalPrice: "99.90",
+        salePrice: "69.90",
+        discountPercentage: 30,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-oriental-premium-condicionador-600ml-54662-2969034784225539109_1-1.jpg",
+        volume: "600ml",
+        productId: "84463",
+      },
+      {
+        name: "Kerasys Repairing – Condicionador 180ml",
+        description: "Condicionador reparador para cabelos danificados",
+        category: "condicionador",
+        originalPrice: "49.90",
+        salePrice: "37.89",
+        discountPercentage: 24,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-repairing-condicionador-180ml-54657-8450218047522127791_1-1.jpg",
+        volume: "180ml",
+        productId: "84470",
+      },
+      {
+        name: "Kerasys Moisturizing – Condicionador 180ml",
+        description: "Condicionador hidratante para todos os tipos de cabelo",
+        category: "condicionador",
+        originalPrice: "49.90",
+        salePrice: "37.89",
+        discountPercentage: 24,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/b20279a5-3cb0-4287-9b75-0f6c18a82bd7-8761-kermoistsha180cond180-62fabdfea5a3c917225fd088-31f4c8cc-279e-4824-9767-2a954a464533-1.jpg",
+        volume: "180ml",
+        productId: "84516",
+      },
+      
+      // Shampoos
+      {
+        name: "Kerasys Advanced Keramide Ampoule Damage Clinic – Shampoo 1L",
+        description: "Shampoo reparador com keramida para cabelos danificados",
+        category: "shampoo",
+        originalPrice: "139.90",
+        salePrice: "98.90",
+        discountPercentage: 29,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/b9693156-96d1-497c-89e9-3d816c782160-2024-12-27t174409978034878-kekeamdaclsh-65d364ccc4936428e5550c10-626e36a9-4b36-4e93-9bb8-0de860d19eb5-1.jpg",
+        volume: "1L",
+        productId: "84450",
+      },
+      {
+        name: "Kerasys Moisturizing – Shampoo 180ml",
+        description: "Shampoo hidratante para uso diário",
+        category: "shampoo",
+        originalPrice: "39.90",
+        salePrice: "29.90",
+        discountPercentage: 25,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-moisturizing-shampoo-180g-54651-1544130672648633265_1-1.jpg",
+        volume: "180ml",
+        productId: "84459",
+      },
+      {
+        name: "Kerasys Moisturizing – Shampoo 600ml",
+        description: "Shampoo hidratante em tamanho família",
+        category: "shampoo",
+        originalPrice: "105.90",
+        salePrice: "79.90",
+        discountPercentage: 25,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-moisturizing-shampoo-600ml-54652-1481950635773480425-1.jpg",
+        volume: "600ml",
+        productId: "84460",
+      },
+      {
+        name: "Kerasys Oriental Premium – Shampoo 200ml",
+        description: "Shampoo premium com ingredientes orientais",
+        category: "shampoo",
+        originalPrice: "39.99",
+        salePrice: "29.99",
+        discountPercentage: 25,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/a427cb89-d135-4267-9d99-71ce44709e5e-kerasys-oriental-premium-shampoo-200g_1-1.png",
+        volume: "200ml",
+        productId: "84464",
+      },
+      {
+        name: "Kerasys Perfume Lovely Romantic – Shampoo 600ml",
+        description: "Shampoo perfumado com fragrância romântica",
+        category: "shampoo",
+        originalPrice: "99.90",
+        salePrice: "69.90",
+        discountPercentage: 30,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/7b1a7e54-6dce-470b-8278-6f8d11bf249e-2024-12-19t162540400746019-kepelorosh600-65d364ccc4936428e5550c10-7c6ad39d-fb37-4303-a988-8c4319d2405c_1-1.jpg",
+        volume: "600ml",
+        productId: "84467",
+      },
+      {
+        name: "Kerasys Repairing – Shampoo 180ml",
+        description: "Shampoo reparador para cabelos danificados",
+        category: "shampoo",
+        originalPrice: "62.00",
+        salePrice: "36.89",
+        discountPercentage: 41,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/1319fd64-1fe1-4f17-b27e-eff82cfbe3fa-kerasys-repairing-shampoo-180ml_1-1.png",
+        volume: "180ml",
+        productId: "84472",
+      },
+      {
+        name: "Kerasys Revitalizing – Shampoo 180ml",
+        description: "Shampoo revitalizante para cabelos cansados",
+        category: "shampoo",
+        originalPrice: "56.00",
+        salePrice: "29.90",
+        discountPercentage: 47,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-shampoo-180g-54647-1381634674087053385_1-1.jpg",
+        volume: "180ml",
+        productId: "84475",
+      },
+      
+      // Tratamentos/Máscaras
+      {
+        name: "Kerasys Advanced Keramide Ampoule Damage Clinic – Máscara Capilar 1L",
+        description: "Máscara capilar intensiva desenvolvida para cabelos severamente danificados. Fórmula enriquecida com Ceramidas, Queratina e Óleo de Argan, nutre, reconstrói e revitaliza os fios, devolvendo a saúde e o brilho natural dos cabelos.",
+        category: "tratamento",
+        originalPrice: "199.90",
+        salePrice: "136.89",
+        discountPercentage: 32,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/e7f05be2-3a41-48b5-bec9-c6eaa2714d49-2025-01-06t175701078717335-keramaketrdm-65d364ccc4936428e5550c10-b916948c-632d-45db-98f2-b73ee9f92df4-1.jpg",
+        volume: "1L",
+        productId: "84449",
+      },
+      {
+        name: "Kerasys Advanced Moisture Ampoule 10x – Máscara Capilar 300ml",
+        description: "Máscara capilar hidratante intensiva com ampola de hidratação 10x",
+        category: "tratamento",
+        originalPrice: "115.90",
+        salePrice: "85.90",
+        discountPercentage: 26,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/a4feeeb4-0c89-4563-9cc9-15fd1e065ea1-2023-11-02t144851691408143-mascara-kerasys-advance-ampoule-moisture-10x-hair-pack-300mljpg14366720382224873603-1.jpg",
+        volume: "300ml",
+        productId: "84451",
+      },
+      {
+        name: "Kerasys Argan Oil – Máscara Capilar 1L",
+        description: "Máscara capilar nutritiva com óleo de argan",
+        category: "tratamento",
+        originalPrice: "199.90",
+        salePrice: "139.90",
+        discountPercentage: 30,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/7a344dca-890a-49a1-a709-b032ed332e65-mp275637-mascara-kerasys-argan-oil-treatment-1l-1.png",
+        volume: "1L",
+        productId: "84453",
+      },
+      {
+        name: "Kerasys Moisture Clinic – Máscara Capilar 300ml",
+        description: "Máscara capilar hidratante da linha Moisture Clinic",
+        category: "tratamento",
+        originalPrice: "99.90",
+        salePrice: "79.90",
+        discountPercentage: 20,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/9982f768-0343-4479-b74d-e8694c5bae4a-mp154529-mascara-kerasys-moisture-clinic-treatment-300ml-1.png",
+        volume: "300ml",
+        productId: "84457",
+      },
+      {
+        name: "Kerasys Propolis Energy Shampoo 1L",
+        description: "Tratamento que combate a porosidade, criando uma película protetora sobre os fios danificados. Ajuda a recuperar o brilho, maciez e força dos cabelos, blindando completamente a fibra capilar contra sujeiras, fungos e bactérias.",
+        category: "tratamento",
+        originalPrice: "149.90",
+        salePrice: "149.90",
+        discountPercentage: 0,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/tratamento_p_ropolis.webp",
+        volume: "1L",
+        productId: "84519",
+      },
+      
+      // Kits Promocionais
+      {
         name: "Kerasys Kit Argan Oil Nutrição Shampoo + Condicionador",
-        description: "Kit completo com shampoo e condicionador de óleo de argan",
+        description: "Kit profissional de nutrição com Argan. O óleo de argan é rico em ácidos graxos (como o ômega 9) essenciais para a saúde dos cabelos. Promove hidratação e nutrição profundas dos fios, deixando-os mais brilhantes, macios e sem pontas duplas. Contém: 1 Shampoo 1000ml + 1 Condicionador 1000ml.",
         category: "kits-promocionais",
         originalPrice: "299.90",
         salePrice: "199.90",
@@ -123,723 +262,167 @@ export class MemStorage implements IStorage {
         salePrice: "145.90",
         discountPercentage: 51,
         imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/9bc69cfb-13fa-43f9-bbad-3d5169b09313-2024-12-13t151856822218456-kitkeduoconut-65d364ccc4936428e5550c10-d689d7ec-3531-4473-af54-c10cd5324979_1-1.jpg",
-        volume: "1L cada",
+        volume: "Kit",
         productId: "84456",
       },
       {
-        name: "Kerasys Moisture Clinic – Máscara Capilar 300ml",
-        description: "Máscara capilar hidratante para cabelos ressecados",
-        category: "tratamento",
-        originalPrice: "99.90",
-        salePrice: "79.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/9982f768-0343-4479-b74d-e8694c5bae4a-mp154529-mascara-kerasys-moisture-clinic-treatment-300ml-1.png",
-        volume: "300ml",
-        productId: "84457",
-      },
-      {
         name: "KERASYS PROPOLIS SHAMPOO ENERGY 180 ML + CONDICIONADOR SHINE 180 ML",
-        description: "Kit com shampoo energizante e condicionador com própolis",
+        description: "Kit com shampoo energy e condicionador shine da linha própolis",
         category: "kits-promocionais",
         originalPrice: "89.90",
         salePrice: "69.90",
         discountPercentage: 22,
         imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/4e56c161-7b10-4422-93b1-a7dc63cc8204-2024-10-10t114222632502768-kereshk20360-66ce14b94b567678abe903d7-5ea4ae15-dd78-4d49-9340-69bb08e65b5c-1.jpg",
-        volume: "180ml cada",
+        volume: "Kit",
         productId: "84468",
       },
       {
-        name: "Kerasys Propolis Energy Shampoo 1L",
-        description: "Shampoo energizante com própolis que combate a porosidade, criando uma película protetora sobre os fios danificados",
-        category: "shampoo",
-        originalPrice: "149.90",
-        salePrice: "149.90",
-        discountPercentage: 0,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/tratamento_p_ropolis.webp",
-        volume: "1L",
-        productId: "featured-propolis",
-      },
-      // Additional Shampoo Products
-      {
-        name: "Kerasys Moisturizing – Shampoo 180ml",
-        description: "Shampoo hidratante para cabelos ressecados",
-        category: "shampoo",
-        originalPrice: "39.90",
-        salePrice: "29.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-moisturizing-shampoo-180g-54651-1544130672648633265_1-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84459",
-      },
-      {
-        name: "Kerasys Moisturizing – Shampoo 600ml",
-        description: "Shampoo hidratante para cabelos ressecados",
-        category: "shampoo",
-        originalPrice: "105.90",
-        salePrice: "79.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-moisturizing-shampoo-600ml-54652-1481950635773480425-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84460",
-      },
-      {
-        name: "Kerasys Oriental Premium – Shampoo 200ml",
-        description: "Shampoo premium oriental com fragrância sofisticada",
-        category: "shampoo",
-        originalPrice: "39.99",
-        salePrice: "29.99",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/a427cb89-d135-4267-9d99-71ce44709e5e-kerasys-oriental-premium-shampoo-200g_1-1-430x430.png",
-        volume: "200ml",
-        productId: "84464",
-      },
-      {
-        name: "Kerasys Oriental Premium – Shampoo 600ml",
-        description: "Shampoo premium oriental com fragrância sofisticada",
-        category: "shampoo",
-        originalPrice: "99.90",
-        salePrice: "69.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-oriental-premium-shampoo-600g-54660-8673332746674290130_1-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84465",
-      },
-      {
-        name: "Kerasys Perfume Lovely Romantic – Shampoo 600ml",
-        description: "Shampoo perfumado com fragrância romântica",
-        category: "shampoo",
-        originalPrice: "99.90",
-        salePrice: "69.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/7b1a7e54-6dce-470b-8278-6f8d11bf249e-2024-12-19t162540400746019-kepelorosh600-65d364ccc4936428e5550c10-7c6ad39d-fb37-4303-a988-8c4319d2405c_1-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84467",
-      },
-      // Additional Conditioner Products
-      {
-        name: "Kerasys Moisturizing – Condicionador 180ml",
-        description: "Condicionador hidratante para cabelos ressecados",
-        category: "condicionador",
-        originalPrice: "45.00",
-        salePrice: "35.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/e91b71e3-a307-4d7e-bd65-6f0e88a19f4e-kerasys-moisturizing-condicionador-180ml_1-1-430x430.png",
-        volume: "180ml",
-        productId: "84458",
-      },
-      {
-        name: "KERASYS MOISTURIZING CONDICIONADOR 400 ML",
-        description: "Condicionador hidratante para cabelos ressecados",
-        category: "condicionador",
-        originalPrice: "89.90",
-        salePrice: "59.90",
-        discountPercentage: 33,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/0c534086-65b7-4fd9-a1d8-2bf404530359-2024-10-09t153303969156781-kermoi020400-66ce14b94b567678abe903d7-f9243e22-09af-4aab-9160-0c6a099fb835-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84461",
-      },
-      {
-        name: "Kerasys Oriental Premium – Condicionador 200ml",
-        description: "Condicionador premium oriental com fragrância sofisticada",
-        category: "condicionador",
-        originalPrice: "69.90",
-        salePrice: "39.90",
-        discountPercentage: 43,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/0ba05c6f-b7e7-4998-b651-f8733595b36a-kerasys-oriental-premium-condicionador-200ml_1-1-430x430.png",
-        volume: "200ml",
-        productId: "84462",
-      },
-      {
-        name: "Kerasys Oriental Premium – Condicionador 600ml",
-        description: "Condicionador premium oriental com fragrância sofisticada",
-        category: "condicionador",
-        originalPrice: "99.90",
-        salePrice: "69.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-oriental-premium-condicionador-600ml-54662-2969034784225539109_1-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84463",
-      },
-      {
-        name: "Kerasys Repairing – Condicionador 180ml",
-        description: "Condicionador reparador para cabelos danificados",
-        category: "condicionador",
-        originalPrice: "49.90",
-        salePrice: "37.89",
-        discountPercentage: 24,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-repairing-condicionador-180ml-54657-8450218047522127791_1-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84470",
-      },
-      // Additional Treatment Products
-      {
-        name: "Kerasys Própolis Shine – Máscara Capilar 1L",
-        description: "Máscara capilar com própolis para brilho intenso",
-        category: "tratamento",
-        originalPrice: "159.90",
-        salePrice: "99.90",
-        discountPercentage: 38,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/5beb91d7-1114-4913-98e2-617b8314ebef-mp146015-mascara-kerasys-propolis-shine-1000ml-1-430x430.png",
-        volume: "1L",
-        productId: "84469",
-      },
-      {
-        name: "Sérum Kerasys Advanced Ampoule Moisture 80ml",
-        description: "Sérum hidratante avançado com ampola de hidratação",
-        category: "tratamento",
-        originalPrice: "112.87",
-        salePrice: "59.90",
-        discountPercentage: 47,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/01c9392c-5b96-479a-8f33-8eccf55c6d2e-2023-11-03t092641753116371-serum-kerasys-advanced-ampoule-moisture-80mljpg8499581906475722834-1-430x430.jpg",
-        volume: "80ml",
-        productId: "84528",
-      },
-      {
-        name: "Tratamento Kerasys Salon de Magie 200ml",
-        description: "Tratamento capilar salon de magie para cabelos danificados",
-        category: "tratamento",
-        originalPrice: "150.00",
-        salePrice: "79.90",
-        discountPercentage: 47,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/201bc7c6-5dec-4033-8aad-101741f44d38-mp154527-tratamento-kerasys-salon-de-magie-200ml-1-430x430.png",
-        volume: "200ml",
-        productId: "84529",
-      },
-      // Additional Kit Products
-      {
-        name: "Kerasys Oriental Premium Trio (3 Produtos)",
-        description: "Kit trio com shampoo, condicionador e máscara oriental premium",
-        category: "kits-promocionais",
-        originalPrice: "199.90",
-        salePrice: "139.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-oriental-premium-trio-3-produtos-54948-6700721022440947146-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84466",
-      },
-      {
         name: "Kerasys Revitalizing Duo Salão (2 Produtos)",
-        description: "Kit duo revitalizante profissional para salão",
+        description: "Kit revitalizante profissional com 2 produtos",
         category: "kits-promocionais",
         originalPrice: "299.00",
         salePrice: "195.90",
         discountPercentage: 34,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-duo-salao-2-produtos-54949-1234567890-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84480",
-      },
-      // Additional Shampoos for pagination
-      {
-        name: "Kerasys Damage Clinic Shampoo 180ml",
-        description: "Shampoo reparador para cabelos danificados",
-        category: "shampoo",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-damage-clinic-shampoo-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84481",
-      },
-      {
-        name: "Kerasys Color Protect Shampoo 180ml",
-        description: "Shampoo protetor de cor para cabelos coloridos",
-        category: "shampoo",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-color-protect-shampoo-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84482",
-      },
-      {
-        name: "Kerasys Argan Oil Shampoo 180ml",
-        description: "Shampoo nutritivo com óleo de argan",
-        category: "shampoo",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-argan-oil-shampoo-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84483",
-      },
-      {
-        name: "Kerasys Lovely Romantic Shampoo 180ml",
-        description: "Shampoo perfumado com fragrância romântica",
-        category: "shampoo",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-lovely-romantic-shampoo-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84484",
-      },
-      {
-        name: "Kerasys Revitalizing Shampoo 600ml",
-        description: "Shampoo revitalizante para cabelos fracos",
-        category: "shampoo",
-        originalPrice: "99.90",
-        salePrice: "69.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-shampoo-600ml-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84485",
-      },
-      {
-        name: "Kerasys Silk Moisture Shampoo 400ml",
-        description: "Shampoo hidratante com proteínas da seda",
-        category: "shampoo",
-        originalPrice: "79.90",
-        salePrice: "59.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-silk-moisture-shampoo-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84486",
-      },
-      {
-        name: "Kerasys Deep Cleansing Shampoo 1L",
-        description: "Shampoo de limpeza profunda para cabelos oleosos",
-        category: "shampoo",
-        originalPrice: "139.90",
-        salePrice: "99.90",
-        discountPercentage: 29,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-deep-cleansing-shampoo-1l-1-430x430.jpg",
-        volume: "1L",
-        productId: "84487",
-      },
-      {
-        name: "Kerasys Protein Repair Shampoo 400ml",
-        description: "Shampoo reparador com proteínas para cabelos danificados",
-        category: "shampoo",
-        originalPrice: "89.90",
-        salePrice: "69.90",
-        discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-protein-repair-shampoo-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84488",
-      },
-      {
-        name: "Kerasys Perfume Lovely Elegant Shampoo 400ml",
-        description: "Shampoo perfumado com fragrância elegante",
-        category: "shampoo",
-        originalPrice: "89.90",
-        salePrice: "69.90",
-        discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-perfume-lovely-elegant-shampoo-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84489",
-      },
-      {
-        name: "Kerasys Salon Care Shampoo 1L",
-        description: "Shampoo profissional para uso em salão",
-        category: "shampoo",
-        originalPrice: "149.90",
-        salePrice: "119.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-salon-care-shampoo-1l-1-430x430.jpg",
-        volume: "1L",
-        productId: "84490",
-      },
-      {
-        name: "Kerasys Nutritive Ampoule Shampoo 600ml",
-        description: "Shampoo nutritivo com ampola reparadora",
-        category: "shampoo",
-        originalPrice: "109.90",
-        salePrice: "89.90",
-        discountPercentage: 18,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-nutritive-ampoule-shampoo-600ml-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84491",
-      },
-      // Additional Conditioners for pagination
-      {
-        name: "Kerasys Damage Clinic Condicionador 180ml",
-        description: "Condicionador reparador para cabelos danificados",
-        category: "condicionador",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-damage-clinic-condicionador-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84492",
-      },
-      {
-        name: "Kerasys Color Protect Condicionador 180ml",
-        description: "Condicionador protetor de cor para cabelos coloridos",
-        category: "condicionador",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-color-protect-condicionador-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84493",
-      },
-      {
-        name: "Kerasys Argan Oil Condicionador 180ml",
-        description: "Condicionador nutritivo com óleo de argan",
-        category: "condicionador",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-argan-oil-condicionador-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84494",
-      },
-      {
-        name: "Kerasys Lovely Romantic Condicionador 180ml",
-        description: "Condicionador perfumado com fragrância romântica",
-        category: "condicionador",
-        originalPrice: "49.90",
-        salePrice: "39.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-lovely-romantic-condicionador-180ml-1-430x430.jpg",
-        volume: "180ml",
-        productId: "84495",
-      },
-      {
-        name: "Kerasys Revitalizing Condicionador 600ml",
-        description: "Condicionador revitalizante para cabelos fracos",
-        category: "condicionador",
-        originalPrice: "99.90",
-        salePrice: "69.90",
-        discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-condicionador-600ml-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84496",
-      },
-      {
-        name: "Kerasys Silk Moisture Condicionador 400ml",
-        description: "Condicionador hidratante com proteínas da seda",
-        category: "condicionador",
-        originalPrice: "79.90",
-        salePrice: "59.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-silk-moisture-condicionador-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84497",
-      },
-      {
-        name: "Kerasys Deep Repair Condicionador 1L",
-        description: "Condicionador reparador profundo para cabelos muito danificados",
-        category: "condicionador",
-        originalPrice: "139.90",
-        salePrice: "99.90",
-        discountPercentage: 29,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-deep-repair-condicionador-1l-1-430x430.jpg",
-        volume: "1L",
-        productId: "84498",
-      },
-      {
-        name: "Kerasys Protein Repair Condicionador 400ml",
-        description: "Condicionador reparador com proteínas para cabelos danificados",
-        category: "condicionador",
-        originalPrice: "89.90",
-        salePrice: "69.90",
-        discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-protein-repair-condicionador-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84499",
-      },
-      {
-        name: "Kerasys Perfume Lovely Elegant Condicionador 400ml",
-        description: "Condicionador perfumado com fragrância elegante",
-        category: "condicionador",
-        originalPrice: "89.90",
-        salePrice: "69.90",
-        discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-perfume-lovely-elegant-condicionador-400ml-1-430x430.jpg",
-        volume: "400ml",
-        productId: "84500",
-      },
-      {
-        name: "Kerasys Salon Care Condicionador 1L",
-        description: "Condicionador profissional para uso em salão",
-        category: "condicionador",
-        originalPrice: "149.90",
-        salePrice: "119.90",
-        discountPercentage: 20,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-salon-care-condicionador-1l-1-430x430.jpg",
-        volume: "1L",
-        productId: "84501",
-      },
-      {
-        name: "Kerasys Nutritive Ampoule Condicionador 600ml",
-        description: "Condicionador nutritivo com ampola reparadora",
-        category: "condicionador",
-        originalPrice: "109.90",
-        salePrice: "89.90",
-        discountPercentage: 18,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-nutritive-ampoule-condicionador-600ml-1-430x430.jpg",
-        volume: "600ml",
-        productId: "84502",
-      },
-      // Additional Kits for pagination
-      {
-        name: "Kerasys Kit Damage Clinic Completo (3 Produtos)",
-        description: "Kit completo para tratamento de cabelos danificados",
-        category: "kits-promocionais",
-        originalPrice: "299.90",
-        salePrice: "199.90",
-        discountPercentage: 33,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-damage-clinic-completo-3-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84503",
-      },
-      {
-        name: "Kerasys Kit Color Protect (2 Produtos)",
-        description: "Kit protetor de cor com shampoo e condicionador",
-        category: "kits-promocionais",
-        originalPrice: "199.90",
-        salePrice: "149.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-color-protect-2-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84504",
-      },
-      {
-        name: "Kerasys Kit Moisturizing Family (4 Produtos)",
-        description: "Kit familiar hidratante com 4 produtos",
-        category: "kits-promocionais",
-        originalPrice: "399.90",
-        salePrice: "299.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-moisturizing-family-4-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84505",
-      },
-      {
-        name: "Kerasys Kit Perfume Lovely (2 Produtos)",
-        description: "Kit perfumado com shampoo e condicionador",
-        category: "kits-promocionais",
-        originalPrice: "199.90",
-        salePrice: "149.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-perfume-lovely-2-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84506",
-      },
-      {
-        name: "Kerasys Kit Revitalizing Premium (3 Produtos)",
-        description: "Kit revitalizante premium com 3 produtos",
-        category: "kits-promocionais",
-        originalPrice: "399.90",
-        salePrice: "299.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-revitalizing-premium-3-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84507",
-      },
-      {
-        name: "Kerasys Kit Salon Professional (5 Produtos)",
-        description: "Kit profissional para salão com 5 produtos",
-        category: "kits-promocionais",
-        originalPrice: "599.90",
-        salePrice: "399.90",
-        discountPercentage: 33,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-salon-professional-5-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84508",
-      },
-      {
-        name: "Kerasys Kit Silk Moisture (2 Produtos)",
-        description: "Kit hidratante com proteínas da seda",
-        category: "kits-promocionais",
-        originalPrice: "199.90",
-        salePrice: "149.90",
-        discountPercentage: 25,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-silk-moisture-2-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84509",
-      },
-      {
-        name: "Kerasys Kit Oriental Luxury (3 Produtos)",
-        description: "Kit oriental luxuoso com 3 produtos",
-        category: "kits-promocionais",
-        originalPrice: "349.90",
-        salePrice: "249.90",
-        discountPercentage: 29,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-kit-oriental-luxury-3-produtos-1-430x430.jpg",
-        volume: "Kit",
-        productId: "84510",
-        discountPercentage: 34,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-duo-salao-2-produtos-54940-2466884936377254145_1-1-430x430.jpg",
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-revitalizing-duo-salao-2-produtos-54940-2466884936377254145_1-1.jpg",
         volume: "Kit",
         productId: "84477",
       },
       {
         name: "Kit Kerasys Moisturizing Shampoo 180ml + Condicionador 180ml",
-        description: "Kit hidratante completo para cabelos ressecados",
+        description: "Kit hidratante com shampoo e condicionador",
         category: "kits-promocionais",
         originalPrice: "89.90",
         salePrice: "69.90",
         discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/6a1b6ed3-fecf-458c-8a5f-681cac6c8b9d-kermoistsha180cond180-64b02e65de042b0d7485e1f9-46f9a1f0-1d86-40c5-bed0-ac814cf28cd7_1-1-430x430.jpg",
-        volume: "180ml cada",
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/6a1b6ed3-fecf-458c-8a5f-681cac6c8b9d-kermoistsha180cond180-64b02e65de042b0d7485e1f9-46f9a1f0-1d86-40c5-bed0-ac814cf28cd7_1-1.jpg",
+        volume: "Kit",
         productId: "84515",
       },
       {
-        name: "Kit Kerasys Oriental Premium Shampoo 200ml + Condicionador 200ml",
-        description: "Kit oriental premium com fragrância sofisticada",
+        name: "Kit Kerasys Revitalizing Dupla (2 Produtos)",
+        description: "Kit revitalizante dupla com 2 produtos",
         category: "kits-promocionais",
-        originalPrice: "89.90",
-        salePrice: "69.90",
-        discountPercentage: 22,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/0714353a-0db5-41f1-b13b-1e0dbdf4b841-8761-kerorientalsha200cond200-62fabdfea5a3c917225fd088-1491fb08-d425-445c-b1b6-fd5dbec3a49d-1-430x430.jpg",
-        volume: "200ml cada",
+        originalPrice: "99.90",
+        salePrice: "59.90",
+        discountPercentage: 40,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/e83716fc-6de2-4fba-8e43-66bf07eb0dcf-2025-01-08t120247625547479-keredushc-66d7572ae01f6e63c1a2e3f0-755b44a9-6c53-4a90-a16a-3d3d5008e059-1.jpg",
+        volume: "Kit",
         productId: "84517",
       },
       {
-        name: "Kit Kerasys Oriental Premium Shampoo 600ml + Condicionador 600ml",
-        description: "Kit oriental premium tamanho profissional",
+        name: "Kit Kerasys Propolis Energy Shampoo 1L + Tratamento de Brilho 1L",
+        description: "Kit profissional com shampoo propolis energy e tratamento de brilho",
         category: "kits-promocionais",
-        originalPrice: "197.00",
-        salePrice: "117.90",
-        discountPercentage: 40,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/ebe2637e-aa09-4da3-ae78-37aec640bef1-8761-kerorientalshacon600-62fabdfea5a3c917225fd088-d27247f4-f3be-45bb-95ad-34e38a77122b_1-1-430x430.jpg",
-        volume: "600ml cada",
+        originalPrice: "149.90",
+        salePrice: "149.90",
+        discountPercentage: 0,
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/tratamento_p_ropolis.webp",
+        volume: "Kit",
         productId: "84518",
       },
       {
-        name: "Kit Kerasys Propolis Energy Shampoo 180ml + Tratamento de Brilho 180ml",
-        description: "Kit energizante com própolis e tratamento de brilho",
+        name: "Kerasys Oriental Premium Trio (3 Produtos)",
+        description: "Kit premium oriental com 3 produtos",
         category: "kits-promocionais",
-        originalPrice: "117.90",
-        salePrice: "65.95",
-        discountPercentage: 44,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/bf7ddd65-234b-4352-b3ee-e98bfe7b8a58-2025-02-17t165554316547579-kerprosha180con180-64b02e65de042b0d7485e1f9-63310363-2dd9-4c8b-9726-0455df03dd5a-1-430x430.jpg",
-        volume: "180ml cada",
-        productId: "84519",
-      },
-      {
-        name: "Kit Kerasys Propolis Energy Shampoo 1L + Tratamento de Brilho 1L",
-        description: "Kit energizante profissional com própolis",
-        category: "kits-promocionais",
-        originalPrice: "255.90",
-        salePrice: "149.90",
-        discountPercentage: 41,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/1671ac5a-2cfb-40ed-ad65-698ff03a44cf-8761-kitkershamas1000-62fabdfea5a3c917225fd088-650df1f5-30f7-4db4-8c6f-f6e4204c4c37_1-1-430x430.jpg",
-        volume: "1L cada",
-        productId: "84520",
-      },
-      {
-        name: "Kit Kerasys Repairing – Shampoo 180ml + Condicionador 180ml",
-        description: "Kit reparador para cabelos danificados",
-        category: "kits-promocionais",
-        originalPrice: "99.90",
-        salePrice: "69.90",
+        originalPrice: "199.90",
+        salePrice: "139.90",
         discountPercentage: 30,
-        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/whatsapp-image-2025-03-13-at-161140-photoroom-1-430x430.jpg",
-        volume: "180ml cada",
-        productId: "84521",
+        imageUrl: "https://xn--kersys-kta.com/wp-content/uploads/2025/04/kerasys-oriental-premium-trio-3-produtos-54948-6700721022440947146-1.jpg",
+        volume: "Kit",
+        productId: "84466",
       },
     ];
 
-    productsData.forEach(product => {
-      const id = this.currentProductId++;
+    productsData.forEach((product) => {
       const fullProduct: Product = {
-        id,
+        id: this.currentProductId.toString(),
         ...product,
-        inStock: true,
-        volume: product.volume || null,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       };
-      this.products.set(product.productId, fullProduct);
+      this.products.set(fullProduct.id, fullProduct);
+      this.currentProductId++;
     });
   }
 
+  // Product CRUD operations
   async getAllProducts(): Promise<Product[]> {
     return Array.from(this.products.values());
   }
 
   async getProductsByCategory(category: string): Promise<Product[]> {
-    const allProducts = Array.from(this.products.values());
-    if (category === "mais-vendidos") {
-      return allProducts.slice(0, 10);
-    }
-    return allProducts.filter(product => product.category === category);
+    return Array.from(this.products.values()).filter(p => p.category === category);
   }
 
-  async getProductById(productId: string): Promise<Product | undefined> {
-    return this.products.get(productId);
+  async getProductById(id: string): Promise<Product | undefined> {
+    return this.products.get(id);
   }
 
   async createProduct(product: InsertProduct): Promise<Product> {
-    const id = this.currentProductId++;
     const fullProduct: Product = {
-      id,
+      id: this.currentProductId.toString(),
       ...product,
-      inStock: true,
-      volume: product.volume || null,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
     };
-    this.products.set(product.productId, fullProduct);
+    this.products.set(fullProduct.id, fullProduct);
+    this.currentProductId++;
     return fullProduct;
   }
 
+  // Cart operations
   async getCartItems(sessionId: string): Promise<CartItemWithProduct[]> {
     const items = this.cartItems.get(sessionId) || [];
-    const itemsWithProducts: CartItemWithProduct[] = [];
-    
-    for (const item of items) {
-      const product = this.products.get(item.productId);
-      if (product) {
-        itemsWithProducts.push({
-          ...item,
-          product,
-        });
-      }
-    }
-    
-    return itemsWithProducts;
+    return items.map(item => ({
+      ...item,
+      product: this.products.get(item.productId)!
+    }));
   }
 
   async addToCart(sessionId: string, productId: string, quantity: number): Promise<CartItem> {
-    const items = this.cartItems.get(sessionId) || [];
-    const existingItemIndex = items.findIndex(item => item.productId === productId);
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const existingItem = sessionItems.find(item => item.productId === productId);
     
-    if (existingItemIndex >= 0) {
-      items[existingItemIndex].quantity += quantity;
-      this.cartItems.set(sessionId, items);
-      return items[existingItemIndex];
+    if (existingItem) {
+      existingItem.quantity += quantity;
+      return existingItem;
     } else {
       const newItem: CartItem = {
-        id: this.currentCartId++,
+        id: this.currentCartId.toString(),
         sessionId,
         productId,
         quantity,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
       };
-      items.push(newItem);
-      this.cartItems.set(sessionId, items);
+      sessionItems.push(newItem);
+      this.cartItems.set(sessionId, sessionItems);
+      this.currentCartId++;
       return newItem;
     }
   }
 
   async updateCartItemQuantity(sessionId: string, productId: string, quantity: number): Promise<CartItem | undefined> {
-    const items = this.cartItems.get(sessionId) || [];
-    const itemIndex = items.findIndex(item => item.productId === productId);
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const item = sessionItems.find(item => item.productId === productId);
     
-    if (itemIndex >= 0) {
-      if (quantity <= 0) {
-        items.splice(itemIndex, 1);
-        this.cartItems.set(sessionId, items);
-        return undefined;
-      } else {
-        items[itemIndex].quantity = quantity;
-        this.cartItems.set(sessionId, items);
-        return items[itemIndex];
-      }
+    if (item) {
+      item.quantity = quantity;
+      item.updatedAt = new Date().toISOString();
+      return item;
     }
-    
     return undefined;
   }
 
   async removeFromCart(sessionId: string, productId: string): Promise<boolean> {
-    const items = this.cartItems.get(sessionId) || [];
-    const itemIndex = items.findIndex(item => item.productId === productId);
+    const sessionItems = this.cartItems.get(sessionId) || [];
+    const index = sessionItems.findIndex(item => item.productId === productId);
     
-    if (itemIndex >= 0) {
-      items.splice(itemIndex, 1);
-      this.cartItems.set(sessionId, items);
+    if (index !== -1) {
+      sessionItems.splice(index, 1);
+      this.cartItems.set(sessionId, sessionItems);
       return true;
     }
-    
     return false;
   }
 
