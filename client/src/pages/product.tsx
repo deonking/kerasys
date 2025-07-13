@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useRoute } from "wouter";
 import { ShoppingCart, Star, Truck, Shield, ArrowLeft, Package } from "lucide-react";
@@ -17,6 +18,7 @@ export default function ProductPage() {
   const productId = params?.id;
   const { addToCart } = useCart();
   const { toast } = useToast();
+  const [imageError, setImageError] = useState(false);
 
   const { data: product, isLoading } = useQuery<Product>({
     queryKey: [`/api/products/${productId}`],
@@ -89,11 +91,21 @@ export default function ProductPage() {
               -{product.discountPercentage}%
             </div>
           )}
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="w-full max-w-lg mx-auto rounded-lg"
-          />
+          {imageError ? (
+            <div className="w-full max-w-lg mx-auto h-96 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center rounded-lg">
+              <div className="text-center p-8">
+                <div className="text-purple-600 font-bold text-2xl mb-4">Kerasys</div>
+                <div className="text-gray-600 text-lg">{product.volume}</div>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
+              alt={product.name}
+              className="w-full max-w-lg mx-auto rounded-lg"
+              onError={() => setImageError(true)}
+            />
+          )}
         </div>
 
         {/* Product Info */}

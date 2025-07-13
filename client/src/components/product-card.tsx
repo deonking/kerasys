@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -14,6 +15,7 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
   const { addToCart } = useCart();
   const { toast } = useToast();
+  const [imageError, setImageError] = useState(false);
 
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
@@ -46,11 +48,21 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
         <Link href={`/produto/${product.productId}`}>
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="w-full h-48 object-cover"
-          />
+          {imageError ? (
+            <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
+              <div className="text-center p-4">
+                <div className="text-purple-600 font-bold text-lg mb-2">Kerasys</div>
+                <div className="text-gray-600 text-sm">{product.volume}</div>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
+              alt={product.name}
+              className="w-full h-48 object-cover"
+              onError={() => setImageError(true)}
+            />
+          )}
         </Link>
       </div>
       

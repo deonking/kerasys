@@ -141,6 +141,34 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Image proxy route to handle CORS issues
+  app.get("/api/image-proxy", async (req, res) => {
+    try {
+      const { url } = req.query;
+      if (!url || typeof url !== 'string') {
+        return res.status(400).json({ message: "URL da imagem é obrigatória" });
+      }
+
+      const response = await fetch(url);
+      if (!response.ok) {
+        return res.status(404).json({ message: "Imagem não encontrada" });
+      }
+
+      const buffer = await response.arrayBuffer();
+      const contentType = response.headers.get('content-type') || 'image/jpeg';
+      
+      res.set({
+        'Content-Type': contentType,
+        'Cache-Control': 'public, max-age=86400',
+        'Access-Control-Allow-Origin': '*'
+      });
+      
+      res.send(Buffer.from(buffer));
+    } catch (error) {
+      res.status(500).json({ message: "Erro ao carregar imagem" });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }
