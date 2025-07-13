@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useRoute, useLocation } from "wouter";
+import { useState, useEffect } from "react";
 import { ProductCard } from "@/components/product-card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Card, CardContent } from "@/components/ui/card";
@@ -30,12 +31,21 @@ const categoryNames: Record<string, string> = {
 
 export default function Category() {
   const [, params] = useRoute("/categoria/:category");
-  const [, setLocation] = useLocation();
+  const [location, setLocation] = useLocation();
   const category = params?.category;
   
-  // Get current page from URL params
-  const urlParams = new URLSearchParams(window.location.search);
-  const currentPage = parseInt(urlParams.get('page') || '1', 10);
+  // Get current page from URL params and state
+  const [currentPage, setCurrentPage] = useState(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return parseInt(urlParams.get('page') || '1', 10);
+  });
+
+  // Update page when location changes
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const pageFromUrl = parseInt(urlParams.get('page') || '1', 10);
+    setCurrentPage(pageFromUrl);
+  }, [location]);
 
   const { data, isLoading } = useQuery<ProductsResponse>({
     queryKey: ["/api/products", category, currentPage],
@@ -124,7 +134,9 @@ export default function Category() {
             size="sm"
             onClick={() => {
               const newPage = currentPage - 1;
-              setLocation(`/categoria/${category}?page=${newPage}`);
+              const newUrl = `/categoria/${category}?page=${newPage}`;
+              setCurrentPage(newPage);
+              setLocation(newUrl);
             }}
             disabled={!pagination.hasPreviousPage}
           >
@@ -139,7 +151,9 @@ export default function Category() {
                 variant={page === currentPage ? "default" : "outline"}
                 size="sm"
                 onClick={() => {
-                  setLocation(`/categoria/${category}?page=${page}`);
+                  const newUrl = `/categoria/${category}?page=${page}`;
+                  setCurrentPage(page);
+                  setLocation(newUrl);
                 }}
                 className={page === currentPage ? "bg-black text-white" : ""}
               >
@@ -153,7 +167,9 @@ export default function Category() {
             size="sm"
             onClick={() => {
               const newPage = currentPage + 1;
-              setLocation(`/categoria/${category}?page=${newPage}`);
+              const newUrl = `/categoria/${category}?page=${newPage}`;
+              setCurrentPage(newPage);
+              setLocation(newUrl);
             }}
             disabled={!pagination.hasNextPage}
           >
