@@ -68,6 +68,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     refetchOnWindowFocus: false,
   });
 
+  // Update local state when cartItems change
+  useEffect(() => {
+    dispatch({ type: "SET_ITEMS", payload: cartItems });
+  }, [cartItems]);
+
   const addToCartMutation = useMutation({
     mutationFn: async ({ productId, quantity = 1 }: { productId: string; quantity?: number }) => {
       const response = await apiRequest("POST", "/api/cart", { productId, quantity });
@@ -108,9 +113,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     },
   });
 
-  useEffect(() => {
-    dispatch({ type: "SET_ITEMS", payload: cartItems || [] });
-  }, [cartItems]);
+
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
     await addToCartMutation.mutateAsync({ productId, quantity });

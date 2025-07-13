@@ -1,0 +1,6 @@
+@echo off
+echo 🏗️ Construindo projeto para produção...
+call npm run build
+echo 🚀 Iniciando servidor em modo produção...
+set NODE_ENV=production
+node dist/index.js
