@@ -109,9 +109,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    if (cartItems) {
-      dispatch({ type: "SET_ITEMS", payload: cartItems });
-    }
+    dispatch({ type: "SET_ITEMS", payload: cartItems });
   }, [cartItems]);
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
