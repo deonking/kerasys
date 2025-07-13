@@ -103,5 +103,47 @@ Preferred communication style: Simple, everyday language.
 - **Complete Image Replacement (January 13, 2025)**: Eliminados todos os placeholders cinzas substituindo por imagens autênticas de produtos Kerasys do iHerb
 - **Responsive Image Optimization (January 13, 2025)**: Ajustadas todas as imagens para usar object-contain com padding, garantindo que produtos apareçam completos e proporcionais em todos os dispositivos (mobile, tablet, desktop)
 - **ElaUSA Image Integration (January 13, 2025)**: Integradas imagens específicas da ElaUSA para produtos Moisturizing Baobab Oil Condicionador e Kerasys Argan Oil Serum com URLs otimizadas
+- **Complete WooCommerce Theme Conversion (January 13, 2025)**: Convertido completamente de aplicação React/Express para tema WordPress/WooCommerce profissional com todos os templates necessários
 
-The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
+## WordPress/WooCommerce Architecture
+
+### Theme Structure
+- **WordPress Theme**: Tema completo compatível com WooCommerce seguindo padrões WordPress
+- **Template Files**: Todos os templates necessários (header.php, footer.php, index.php, single.php, page.php, 404.php, search.php)
+- **WooCommerce Templates**: Templates específicos para shop, produto individual, carrinho, checkout e minha conta
+- **Styling**: Tailwind CSS integrado com CSS customizado para manter identidade visual Kerasys
+- **JavaScript**: Funcionalidades AJAX para carrinho, notificações e interações
+
+### WooCommerce Integration
+- **Product Display**: Sistema de cards responsivos com imagens object-contain para mostrar produtos completos
+- **Shopping Cart**: Funcionalidade completa de carrinho com AJAX
+- **Checkout**: Sistema de checkout com desconto PIX (10%) e informações de segurança
+- **My Account**: Área do cliente com navegação personalizada
+- **Product Categories**: Organização por shampoo, condicionador, tratamento, kits promocionais
+
+### Key Features
+- **Responsive Design**: Otimizado para mobile, tablet e desktop
+- **PIX Integration**: Desconto automático de 10% para pagamento PIX
+- **Product Import**: Sistema automático de importação dos produtos Kerasys
+- **Image Proxy**: Suporte para imagens externas via proxy
+- **Brazilian E-commerce**: Adaptado para mercado brasileiro (frete grátis, parcelas, PIX)
+
+### File Organization
+```
+/
+├── style.css (Theme header e CSS principal)
+├── functions.php (Funcionalidades WooCommerce e customizações)
+├── header.php / footer.php (Cabeçalho e rodapé)
+├── index.php / page.php / single.php (Templates básicos)
+├── 404.php / search.php (Páginas especiais)
+├── js/main.js (JavaScript customizado)
+└── woocommerce/ (Templates WooCommerce específicos)
+    ├── archive-product.php (Página de produtos/shop)
+    ├── single-product.php (Página individual do produto)
+    ├── content-product.php (Loop de produtos)
+    ├── cart/cart.php (Carrinho de compras)
+    ├── checkout/form-checkout.php (Finalização)
+    └── myaccount/my-account.php (Área do cliente)
+```
+
+The application has been completely transformed from a React/Express monorepo to a professional WordPress/WooCommerce theme while maintaining all the original design, functionality, and authentic Kerasys product catalog.
