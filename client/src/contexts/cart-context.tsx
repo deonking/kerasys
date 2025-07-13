@@ -116,19 +116,19 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
     await addToCartMutation.mutateAsync({ productId, quantity });
-  }, [addToCartMutation.mutateAsync]);
+  }, [addToCartMutation]);
 
   const updateQuantity = useCallback(async (productId: string, quantity: number) => {
     await updateQuantityMutation.mutateAsync({ productId, quantity });
-  }, [updateQuantityMutation.mutateAsync]);
+  }, [updateQuantityMutation]);
 
   const removeFromCart = useCallback(async (productId: string) => {
     await removeFromCartMutation.mutateAsync(productId);
-  }, [removeFromCartMutation.mutateAsync]);
+  }, [removeFromCartMutation]);
 
   const clearCart = useCallback(async () => {
     await clearCartMutation.mutateAsync();
-  }, [clearCartMutation.mutateAsync]);
+  }, [clearCartMutation]);
 
   const openCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: true }), []);
   const closeCart = useCallback(() => dispatch({ type: "SET_OPEN", payload: false }), []);
