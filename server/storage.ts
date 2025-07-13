@@ -46,7 +46,7 @@ export class MemStorage implements IStorage {
         originalPrice: "349.80",
         salePrice: "169.90",
         discountPercentage: 51,
-        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/k/i/kit-shampoo-keratin-bond-silky-moisture-600ml-mais-condicionador-keratin-bond-silky-moisture-600ml.jpg",
+        imageUrl: "https://elausa.com.br/media/catalog/product/cache/7e6530eafeba14d76580b06e3b5d93ee/k/b/kb_kit_rep_pur.png",
         volume: "Kit 600ml + 600ml",
         productId: "11016",
       },
