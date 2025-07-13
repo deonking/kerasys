@@ -99,5 +99,7 @@ Preferred communication style: Simple, everyday language.
 - **Professional Grade Products**: Adicionados produtos de nível profissional como ampolas terapêuticas e sistemas clínicos coreanos
 - **Comprehensive Portfolio**: Catálogo agora inclui 50+ produtos cobrindo todas as necessidades capilares: hidratação, reparação, volume, anti-idade, proteção da cor
 - **Real Product Images Integration (January 13, 2025)**: Substituídas todas as imagens sintéticas por fotos reais dos produtos Kerasys diretamente do iHerb (cloudinary.images-iherb.com), garantindo autenticidade e qualidade profissional das imagens dos produtos
+- **Pagination System Fix (January 13, 2025)**: Corrigido sistema de paginação que não estava funcionando corretamente - agora a navegação entre páginas funciona perfeitamente
+- **Complete Image Replacement (January 13, 2025)**: Eliminados todos os placeholders cinzas substituindo por imagens autênticas de produtos Kerasys do iHerb
 
 The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
