@@ -29,7 +29,7 @@ export default function ProductPage() {
     if (!product) return;
     
     try {
-      await addToCart(product.productId);
+      await addToCart(product.id);
       toast({
         title: "Produto adicionado",
         description: `${product.name} foi adicionado ao carrinho.`,

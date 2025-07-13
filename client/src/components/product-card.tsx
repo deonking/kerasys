@@ -22,7 +22,7 @@ export function ProductCard({ product }: ProductCardProps) {
     e.stopPropagation();
     
     try {
-      await addToCart(product.productId);
+      await addToCart(product.id);
       toast({
         title: "Produto adicionado",
         description: `${product.name} foi adicionado ao carrinho.`,
@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
             -{product.discountPercentage}%
           </div>
         )}
-        <Link href={`/produto/${product.productId}`}>
+        <Link href={`/produto/${product.id}`}>
           {imageError ? (
             <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center">
               <div className="text-center p-4">
@@ -69,7 +69,7 @@ export function ProductCard({ product }: ProductCardProps) {
       </div>
       
       <div className="p-3">
-        <Link href={`/produto/${product.productId}`}>
+        <Link href={`/produto/${product.id}`}>
           <h3 className="text-xs text-gray-700 mb-2 line-clamp-2 hover:text-black">
             {product.name}
           </h3>
