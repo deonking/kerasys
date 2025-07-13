@@ -95,6 +95,6 @@ Preferred communication style: Simple, everyday language.
 - **Internationally Popular Lines**: Incluídas linhas Elegance & Sensual, Hair Clinic System, Natural Recipe (Tea Tree/Coconut), Color Care Protection e Advanced Age Care
 - **Professional Grade Products**: Adicionados produtos de nível profissional como ampolas terapêuticas e sistemas clínicos coreanos
 - **Comprehensive Portfolio**: Catálogo agora inclui 50+ produtos cobrindo todas as necessidades capilares: hidratação, reparação, volume, anti-idade, proteção da cor
-- **High-Quality Imagery**: Utilizadas imagens profissionais de alta qualidade via Unsplash para produtos não disponíveis na ElaUSA mas populares globalmente
+- **Real Product Images Integration (January 13, 2025)**: Substituídas todas as imagens sintéticas por fotos reais dos produtos Kerasys diretamente do iHerb (cloudinary.images-iherb.com), garantindo autenticidade e qualidade profissional das imagens dos produtos
 
 The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
