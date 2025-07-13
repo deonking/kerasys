@@ -53,14 +53,21 @@ export function ProductCard({ product }: ProductCardProps) {
               <div className="text-center p-4">
                 <div className="text-purple-600 font-bold text-lg mb-2">Kerasys</div>
                 <div className="text-gray-600 text-sm">{product.volume}</div>
+                <div className="text-xs text-gray-400 mt-2">Imagem indisponível</div>
               </div>
             </div>
           ) : (
             <img
-              src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
+              src={product.imageUrl}
               alt={product.name}
               className="w-full h-48 object-cover"
-              onError={() => setImageError(true)}
+              onError={(e) => {
+                console.log('Image error for:', product.name, product.imageUrl);
+                setImageError(true);
+              }}
+              onLoad={() => console.log('Image loaded:', product.name)}
+              loading="lazy"
+              crossOrigin="anonymous"
             />
           )}
         </Link>
