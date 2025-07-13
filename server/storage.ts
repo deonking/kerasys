@@ -306,9 +306,6 @@ export class MemStorage implements IStorage {
         volume: "400ml",
         productId: "6066201",
       },
-        volume: "400ml",
-        productId: "6066201",
-      },
       {
         name: "Kerasys Advanced Repair Ampoule Treatment 80ml",
         description: "Tratamento reparador intensivo em ampola para cabelos severamente danificados. Fórmula concentrada com proteínas e ceramidas que reconstroem a estrutura capilar, restaurando força, elasticidade e brilho aos fios.",
@@ -543,106 +540,6 @@ export class MemStorage implements IStorage {
 
   async clearCart(sessionId: string): Promise<void> {
     this.cartItems.set(sessionId, []);
-  }
-}
-
-export const storage = new MemStorage();
-
-    productsData.forEach((product) => {
-      const fullProduct: Product = {
-        id: this.currentProductId.toString(),
-        ...product,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      this.products.set(fullProduct.id, fullProduct);
-      this.currentProductId++;
-    });
-  }
-
-  // Product CRUD operations
-  async getAllProducts(): Promise<Product[]> {
-    return Array.from(this.products.values());
-  }
-
-  async getProductsByCategory(category: string): Promise<Product[]> {
-    return Array.from(this.products.values()).filter(p => p.category === category);
-  }
-
-  async getProductById(id: string): Promise<Product | undefined> {
-    return this.products.get(id);
-  }
-
-  async createProduct(product: InsertProduct): Promise<Product> {
-    const fullProduct: Product = {
-      id: this.currentProductId.toString(),
-      ...product,
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    };
-    this.products.set(fullProduct.id, fullProduct);
-    this.currentProductId++;
-    return fullProduct;
-  }
-
-  // Cart operations
-  async getCartItems(sessionId: string): Promise<CartItemWithProduct[]> {
-    const items = this.cartItems.get(sessionId) || [];
-    return items.map(item => ({
-      ...item,
-      product: this.products.get(item.productId)!
-    }));
-  }
-
-  async addToCart(sessionId: string, productId: string, quantity: number): Promise<CartItem> {
-    const sessionItems = this.cartItems.get(sessionId) || [];
-    const existingItem = sessionItems.find(item => item.productId === productId);
-    
-    if (existingItem) {
-      existingItem.quantity += quantity;
-      return existingItem;
-    } else {
-      const newItem: CartItem = {
-        id: this.currentCartId.toString(),
-        sessionId,
-        productId,
-        quantity,
-        createdAt: new Date().toISOString(),
-        updatedAt: new Date().toISOString(),
-      };
-      sessionItems.push(newItem);
-      this.cartItems.set(sessionId, sessionItems);
-      this.currentCartId++;
-      return newItem;
-    }
-  }
-
-  async updateCartItemQuantity(sessionId: string, productId: string, quantity: number): Promise<CartItem | undefined> {
-    const sessionItems = this.cartItems.get(sessionId) || [];
-    const item = sessionItems.find(item => item.productId === productId);
-    
-    if (item) {
-      item.quantity = quantity;
-      item.updatedAt = new Date().toISOString();
-      return item;
-    }
-    return undefined;
-  }
-
-  async removeFromCart(sessionId: string, productId: string): Promise<boolean> {
-    const sessionItems = this.cartItems.get(sessionId) || [];
-    const index = sessionItems.findIndex(item => item.productId === productId);
-    
-    if (index !== -1) {
-      sessionItems.splice(index, 1);
-      this.cartItems.set(sessionId, sessionItems);
-      return true;
-    }
-    return false;
-  }
-
-  async clearCart(sessionId: string): Promise<void> {
-    this.cartItems.delete(sessionId);
   }
 }
 

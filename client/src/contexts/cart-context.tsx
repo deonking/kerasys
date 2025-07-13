@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer, useEffect, useMemo, useCallback } from "react";
+import { createContext, useContext, useReducer, useEffect, useMemo, useCallback, useState } from "react";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import type { CartItemWithProduct } from "@shared/schema";
@@ -109,9 +109,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    if (cartItems) {
-      dispatch({ type: "SET_ITEMS", payload: cartItems });
-    }
+    dispatch({ type: "SET_ITEMS", payload: cartItems || [] });
   }, [cartItems]);
 
   const addToCart = useCallback(async (productId: string, quantity = 1) => {
