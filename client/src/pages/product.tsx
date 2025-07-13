@@ -102,7 +102,7 @@ export default function ProductPage() {
             <img
               src={`/api/image-proxy?url=${encodeURIComponent(product.imageUrl)}`}
               alt={product.name}
-              className="w-full max-w-lg mx-auto rounded-lg"
+              className="w-full max-w-lg mx-auto rounded-lg object-contain bg-white p-4 h-96"
               onError={() => setImageError(true)}
               loading="lazy"
             />

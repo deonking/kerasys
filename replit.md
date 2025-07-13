@@ -101,5 +101,7 @@ Preferred communication style: Simple, everyday language.
 - **Real Product Images Integration (January 13, 2025)**: Substituídas todas as imagens sintéticas por fotos reais dos produtos Kerasys diretamente do iHerb (cloudinary.images-iherb.com), garantindo autenticidade e qualidade profissional das imagens dos produtos
 - **Pagination System Fix (January 13, 2025)**: Corrigido sistema de paginação que não estava funcionando corretamente - agora a navegação entre páginas funciona perfeitamente
 - **Complete Image Replacement (January 13, 2025)**: Eliminados todos os placeholders cinzas substituindo por imagens autênticas de produtos Kerasys do iHerb
+- **Responsive Image Optimization (January 13, 2025)**: Ajustadas todas as imagens para usar object-contain com padding, garantindo que produtos apareçam completos e proporcionais em todos os dispositivos (mobile, tablet, desktop)
+- **ElaUSA Image Integration (January 13, 2025)**: Integradas imagens específicas da ElaUSA para produtos Moisturizing Baobab Oil Condicionador e Kerasys Argan Oil Serum com URLs otimizadas
 
 The application follows a monorepo structure with shared TypeScript types and schemas between frontend and backend, ensuring type safety across the full stack.
